@@ -1,2 +1,8 @@
 [core]
 	excludesfile = ~/.gitignore_global
+
+[color "status"]
+	added = green white reverse bold
+	changed = magenta white reverse bold
+	untracked = blue white reverse bold
+
