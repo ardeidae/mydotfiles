@@ -6,3 +6,9 @@
 	changed = magenta white reverse bold
 	untracked = blue white reverse bold
 
+[color "diff"]
+	meta = yellow
+	frag = magenta
+	old = red white reverse bold
+	new = green white reverse bold
+
