@@ -3,6 +3,12 @@
 	# signingkey or github credentials in this file! Use ~/.gitconfig.local
 	# instead.
 
+	# if you need to commit with differents emails for differents
+	# repositories, it's better to not define the email in the global
+	# configuration. with this option, git will abort commit until you set
+	# an email. you just have to set it locally for each repository.
+	useConfigOnly = true
+
 [core]
 	excludesfile = ~/.gitignore_global
 
