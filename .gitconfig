@@ -12,3 +12,8 @@
 	old = red white reverse bold
 	new = green white reverse bold
 
+[color "branch"]
+	current = green white reverse bold
+	local = magenta white reverse bold
+	remote = blue white reverse bold
+
