@@ -10,6 +10,7 @@
 	useConfigOnly = true
 
 [core]
+	editor = vim
 	excludesfile = ~/.gitignore_global
 
 [color]
