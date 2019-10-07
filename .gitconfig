@@ -9,6 +9,20 @@
 	# an email. you just have to set it locally for each repository.
 	useConfigOnly = true
 
+[alias]
+	br = branch
+	ci = commit -v
+	co = checkout
+	cp = cherry-pick
+	d = diff
+	dc = diff --cached
+	g = grep -I
+	lg = log -p
+	# view status using short format
+	s = status -s
+	st = status
+	f = fetch
+
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
