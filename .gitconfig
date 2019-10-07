@@ -1,3 +1,8 @@
+[user]
+	# /!\ DO NOT store sensitive information such as name, email,
+	# signingkey or github credentials in this file! Use ~/.gitconfig.local
+	# instead.
+
 [core]
 	excludesfile = ~/.gitignore_global
 
@@ -19,4 +24,13 @@
 	current = green white reverse bold
 	local = magenta white reverse bold
 	remote = blue white reverse bold
+
+[include]
+	# load local configuration.
+	# need to remain at the end of this file.
+	# included configurations will overwrite those in this file.
+	# set sensitive information like user.name, user.email and
+	# user.signingkey.
+
+	path = ~/.gitconfig.local
 
