@@ -56,6 +56,14 @@
 	local = magenta white reverse bold
 	remote = blue white reverse bold
 
+[grep]
+
+	# prefix the line number to matching lines
+	lineNumber = true
+
+	# use perl pattern type
+	patternType = perl
+
 [protocol]
 
 	# disable all protocols, so we only enable secured ones
