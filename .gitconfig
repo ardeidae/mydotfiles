@@ -71,6 +71,27 @@
 	# enable https
 	allow = always
 
+[status]
+
+	# display the number of entries currently stashed away
+	showStash = true
+
+	# shows paths relative to the current directory
+	relativePaths = true
+
+	# disable short format
+	short = false
+
+	# show branch and tracking info
+	branch = true
+
+	# display detailed ahead/behind counts for the branch relative to its
+	# upstream branch
+	aheadBehind = true
+
+	# show also individual files in untracked directories
+	showUntrackedFiles = all
+
 [include]
 
 	# load local configuration.
