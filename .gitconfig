@@ -56,6 +56,21 @@
 	local = magenta white reverse bold
 	remote = blue white reverse bold
 
+[protocol]
+
+	# disable all protocols, so we only enable secured ones
+	allow = never
+
+[protocol "ssh"]
+
+	# enable ssh
+	allow = always
+
+[protocol "https"]
+
+	# enable https
+	allow = always
+
 [include]
 
 	# load local configuration.
