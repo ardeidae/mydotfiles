@@ -64,6 +64,12 @@
 	# use perl pattern type
 	patternType = perl
 
+[log]
+
+	# git-log, git-show, and git-whatchanged show only a partial commit
+	# object name
+	abbrevCommit = true
+
 [protocol]
 
 	# disable all protocols, so we only enable secured ones
