@@ -1,4 +1,5 @@
 [user]
+
 	# /!\ DO NOT store sensitive information such as name, email,
 	# signingkey or github credentials in this file! Use ~/.gitconfig.local
 	# instead.
@@ -10,6 +11,7 @@
 	useConfigOnly = true
 
 [alias]
+
 	br = branch
 	ci = commit -v
 	co = checkout
@@ -24,29 +26,38 @@
 	f = fetch
 
 [core]
+
+	# editor used to edit commit and tag messages
 	editor = vim
+	# pathname to the file that contains patterns to describe paths that
+	# are not meant to be tracked
 	excludesfile = ~/.gitignore_global
 
 [color]
+
 	ui = auto
 
 [color "status"]
+
 	added = green white reverse bold
 	changed = magenta white reverse bold
 	untracked = blue white reverse bold
 
 [color "diff"]
+
 	meta = yellow
 	frag = magenta
 	old = red white reverse bold
 	new = green white reverse bold
 
 [color "branch"]
+
 	current = green white reverse bold
 	local = magenta white reverse bold
 	remote = blue white reverse bold
 
 [include]
+
 	# load local configuration.
 	# need to remain at the end of this file.
 	# included configurations will overwrite those in this file.
