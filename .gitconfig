@@ -64,6 +64,13 @@
 	# use perl pattern type
 	patternType = perl
 
+[interactive]
+
+	# allow to provide one-letter input without hitting enter in
+	# interactive mode. libterm-readkey-perl must be installed,
+	# as apt-get install libterm-readkey-perl.
+	singleKey = true
+
 [log]
 
 	# git-log, git-show, and git-whatchanged show only a partial commit
