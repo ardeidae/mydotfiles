@@ -67,6 +67,11 @@
 	# flag is specified
 	guitool = vscode
 
+	# use a prefix pair that is different from the standard "a/" and "b/"
+	# depending on what is being compared
+	# https://git-scm.com/docs/diff-config#diff-config-diffmnemonicPrefix
+	mnemonicPrefix = true
+
 	# this diff algorithm extends the patience algorithm to "support
 	# low-occurrence common elements"
 	algorithm = histogram
