@@ -18,6 +18,8 @@
 	cp = cherry-pick
 	d = diff
 	dc = diff --cached
+	wd = diff --word-diff=color
+	wdc = diff --word-diff=color --cached
 	g = grep -I
 	lg = log -p
 	# view status using short format
@@ -64,6 +66,14 @@
 	# control which diff tool is used by git-difftool when the -g/--gui
 	# flag is specified
 	guitool = vscode
+
+	# this diff algorithm extends the patience algorithm to "support
+	# low-occurrence common elements"
+	algorithm = histogram
+
+	# Regular Expression used to determine what is a "word" when performing
+	# --word-diff
+	wordRegex = .
 
 [difftool]
 
