@@ -24,6 +24,7 @@
 	s = status -s
 	st = status
 	f = fetch
+	dt = difftool
 
 [core]
 
@@ -55,6 +56,29 @@
 	current = green white reverse bold
 	local = magenta white reverse bold
 	remote = blue white reverse bold
+
+[diff]
+	# control which diff tool is used by git-difftool
+	tool = vim
+
+	# control which diff tool is used by git-difftool when the -g/--gui
+	# flag is specified
+	guitool = vscode
+
+[difftool]
+
+	# prompt before each invocation of the diff tool
+	prompt = false
+
+[difftool "vim"]
+
+	# specify the command to invoke the specified diff tool
+	cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
+
+[difftool "vscode"]
+
+	# specify the command to invoke the specified diff tool
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
 
 [grep]
 
