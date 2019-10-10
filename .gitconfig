@@ -232,6 +232,11 @@
 	# show also individual files in untracked directories
 	showUntrackedFiles = all
 
+[tag]
+
+	# ordering of tags
+	sort = version:refname
+
 [include]
 
 	# load local configuration.
