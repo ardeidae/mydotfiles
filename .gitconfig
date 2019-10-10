@@ -27,6 +27,7 @@
 	st = status
 	f = fetch
 	dt = difftool
+	mt = mergetool
 
 [core]
 
@@ -115,6 +116,53 @@
 	# git-log, git-show, and git-whatchanged show only a partial commit
 	# object name
 	abbrevCommit = true
+
+[merge]
+
+	# control which merge tool is used by git-mergetool
+	tool = vimdiff
+
+	# control which merge tool is used by git-mergetool when the -g/--gui
+	# flag is specified
+	guitool = vscode
+
+	# display common-ancestor blocks in conflict hunks
+	conflictstyle = diff3
+
+	# create an extra merge commit, force explicit call of git merge --ff
+	ff = false
+
+[mergetool]
+
+	# do not prompt before each invocation of the merge resolution program
+	prompt = false
+
+	# after performing a merge, the original file with conflict markers can
+	# be saved as a file with a .orig extension
+	keepBackup = true
+
+	# when invoking a custom merge tool, git uses a set of temporary files
+	# to pass to the tool. keep the files
+	keepTemporaries = true
+
+[mergetool "vim"]
+
+	# command to invoke the specified merge tool
+	cmd = vim \"$MERGED\"
+
+	# specify the exit code of the merge command can be used to determine
+	# whether the merge was successful. from vim, use :cquit to quit with
+	# an error code
+	trustExitCode = true
+
+[mergetool "vscode"]
+
+	# command to invoke the specified merge tool
+	cmd = code --wait \"$MERGED\"
+
+	# specify the exit code of the merge command cannot be used to
+	# determine whether the merge was successful
+	trustExitCode = false
 
 [protocol]
 
