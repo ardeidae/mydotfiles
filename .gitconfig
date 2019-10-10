@@ -38,9 +38,13 @@
 
 	# editor used to edit commit and tag messages
 	editor = vim
+
 	# pathname to the file that contains patterns to describe paths that
 	# are not meant to be tracked
 	excludesfile = ~/.gitignore_global
+
+	# text viewer for use by Git commands
+	pager = less -FRXK
 
 [color]
 
