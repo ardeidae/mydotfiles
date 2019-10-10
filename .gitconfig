@@ -194,6 +194,17 @@
 	# only such fast-forward merges are allowed
 	ff = only
 
+[rebase]
+
+	# enable autoSquash
+	autoSquash = true
+
+	# autoStash before rebase
+	autoStash = true
+
+	# in interactive mode, drop must be used to remove a commit
+	missingCommitsCheck = error
+
 [status]
 
 	# display the number of entries currently stashed away
