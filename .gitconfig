@@ -34,6 +34,29 @@
 	graph = log --oneline --all --graph --decorate
 	oneline = log --oneline -n 20
 
+[color]
+
+	ui = auto
+
+[color "branch"]
+
+	current = green white reverse bold
+	local = magenta white reverse bold
+	remote = blue white reverse bold
+
+[color "diff"]
+
+	meta = yellow
+	frag = magenta
+	old = red white reverse bold
+	new = green white reverse bold
+
+[color "status"]
+
+	added = green white reverse bold
+	changed = magenta white reverse bold
+	untracked = blue white reverse bold
+
 [core]
 
 	# editor used to edit commit and tag messages
@@ -46,30 +69,8 @@
 	# text viewer for use by Git commands
 	pager = less -FRXK
 
-[color]
-
-	ui = auto
-
-[color "status"]
-
-	added = green white reverse bold
-	changed = magenta white reverse bold
-	untracked = blue white reverse bold
-
-[color "diff"]
-
-	meta = yellow
-	frag = magenta
-	old = red white reverse bold
-	new = green white reverse bold
-
-[color "branch"]
-
-	current = green white reverse bold
-	local = magenta white reverse bold
-	remote = blue white reverse bold
-
 [diff]
+
 	# control which diff tool is used by git-difftool
 	tool = vim
 
@@ -178,14 +179,14 @@
 	# disable all protocols, so we only enable secured ones
 	allow = never
 
-[protocol "ssh"]
-
-	# enable ssh
-	allow = always
-
 [protocol "https"]
 
 	# enable https
+	allow = always
+
+[protocol "ssh"]
+
+	# enable ssh
 	allow = always
 
 [pull]
