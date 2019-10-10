@@ -194,6 +194,12 @@
 	# only such fast-forward merges are allowed
 	ff = only
 
+[push]
+
+	# define the action git push should take if no refspec is explicitly
+	# given
+	default = simple
+
 [rebase]
 
 	# enable autoSquash
