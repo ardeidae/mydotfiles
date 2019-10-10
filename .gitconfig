@@ -181,6 +181,16 @@
 	# enable https
 	allow = always
 
+[pull]
+
+	# rebase branches on top of the fetched branch, instead of merging the
+	# default branch from the default remote when git-pull is run, since
+	# git 2.18.0
+	rebase = merges
+
+	# only such fast-forward merges are allowed
+	ff = only
+
 [status]
 
 	# display the number of entries currently stashed away
