@@ -30,6 +30,9 @@
 	dtg = difftool --gui
 	mt = mergetool
 	mtg = mergetool --gui
+	ec = config --global --edit
+	graph = log --oneline --all --graph --decorate
+	oneline = log --oneline -n 20
 
 [core]
 
