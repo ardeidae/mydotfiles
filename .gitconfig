@@ -27,7 +27,9 @@
 	st = status
 	f = fetch
 	dt = difftool
+	dtg = difftool --gui
 	mt = mergetool
+	mtg = mergetool --gui
 
 [core]
 
