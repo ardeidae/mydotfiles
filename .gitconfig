@@ -74,6 +74,11 @@
 	# Windows.
 	precomposeUnicode = true
 
+[credential]
+
+	# credential storage on macOS
+	helper = osxkeychain
+
 [diff]
 
 	# control which diff tool is used by git-difftool
