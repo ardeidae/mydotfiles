@@ -69,6 +69,11 @@
 	# text viewer for use by Git commands
 	pager = less -FRXK
 
+	# macOS option, git reverts the unicode decomposition of filenames done
+	# by macOS. useful when sharing a repository between macOS and Linux or
+	# Windows.
+	precomposeUnicode = true
+
 [diff]
 
 	# control which diff tool is used by git-difftool
