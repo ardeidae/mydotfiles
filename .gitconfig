@@ -84,6 +84,10 @@
 	# error
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
+	# speed up commands involving untracked files such as git status
+	# https://git-scm.com/docs/git-update-index#_untracked_cache
+	untrackedCache = true
+
 [credential]
 
 	# credential storage on macOS
