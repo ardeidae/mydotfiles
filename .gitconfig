@@ -34,6 +34,11 @@
 	graph = log --oneline --all --graph --decorate
 	oneline = log --oneline -n 20
 
+[apply]
+
+	# detect and fix whitespace errors when applying a patch
+	whitespace = fix
+
 [color]
 
 	ui = auto
@@ -50,6 +55,7 @@
 	frag = magenta
 	old = red white reverse bold
 	new = green white reverse bold
+	whitespace = blue white reverse bold
 
 [color "status"]
 
@@ -73,6 +79,10 @@
 	# by macOS. useful when sharing a repository between macOS and Linux or
 	# Windows.
 	precomposeUnicode = true
+
+	# treat spaces before tabs and all kinds of trailing whitespace as an
+	# error
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
 [credential]
 
