@@ -115,6 +115,10 @@
 	# --word-diff
 	wordRegex = .
 
+	# enable experimental heuristics that shift diff hunk boundaries to
+	# make patches easier to read
+	indentHeuristic = true
+
 [difftool]
 
 	# prompt before each invocation of the diff tool
