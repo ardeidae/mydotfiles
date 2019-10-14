@@ -187,6 +187,12 @@
 	# specify the command to invoke the specified diff tool
 	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
 
+[fetch]
+
+	# remove any remote-tracking references that no longer exist on the
+	# remote
+	prune = true
+
 [format]
 
 	# default pretty format to use
