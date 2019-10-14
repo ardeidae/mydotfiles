@@ -4,6 +4,39 @@ This repository hosts my dotfiles. This is a work in progress.
 
 ## git
 
+This gitconfig file sets some colors, pretty format, command line and graphical
+editors for diff and merge. It defines somes properties to avoid some problems on
+macOS and some safe options.
+
+When you work in a team, there is a good chance your tree will become
+disgusting because there is always someone who doesn't understand how git
+works...
+
+So, here are some options that can prevent 99% of merge problems.
+
+* `merge.ff = false` because when you merge, you want to see the merge branche. In case it was a temporary branch, you can force a fast-forward using `--ff` option.
+* `pull.ff = only` because when you pull, you don't want to merge to keep a clean and straight history.
+* `pull.rebase = merges` because when you pull, if a fast-forward is not possible, you want to rebase to keep a clean and straight history, too.
+
+### Setting your identity
+
+Your name must be set in the `~/.gitconfig.local` file.
+```
+[user]
+email = you@tld.com
+```
+
+The purpose of `user.useConfigOnly = true` is to force you to define
+`user.name` and `user.email`. I only have one name, so I define it in the
+`~/.gitconfig.local`. As I have personal and professional mails, I define
+`user.email` for each project. So, with `user.useConfigOnly = true`, git tells
+me to set an email for each project. The first thing to do when you init your
+git repository is to set your email locally :
+
+```bash
+git config user.email "me@tld.com"
+```
+
 ### aliases
 
 * `a`: add ;
@@ -56,3 +89,8 @@ This repository hosts my dotfiles. This is a work in progress.
 * `wd`: make a word diff ;
 * `wdc`: make a word diff in cached mode.
 
+### Other things
+
+It treats spaces before tabs and all kinds of trailing whitespace as errors.
+It define mnemonicPrefix, autoStash, autoSquash... There are many other things,
+you can see the gitconfig content, it is well documented.
