@@ -15,11 +15,11 @@
 	aliases = !git config --get-regexp alias |cut -c 7-|sort
 
 	a = add
-	am = commit -v --amend
+	am = commit --verbose --amend
 	ap = add --patch
 	bl = blame
-	br = branch -v
-	ci = commit -v
+	br = branch --verbose
+	ci = commit --verbose
 	co = checkout
 	contrib = shortlog --email --summary --numbered # list contributors with number of commits
 	cp = cherry-pick -x
@@ -34,11 +34,10 @@
 	fm = "!f() { git log --name-status --grep=$1; }; f" # find commits by commit message
 	g = grep -I
 	l = log
-	lf = log -u # file log: show changes to a file
 	lg = log --graph
 	lga = log --all --graph
-	ll = log -n 10
-	lp = log -p
+	ll = log --max-count=10
+	lp = log --patch
 	m = merge
 	mt = mergetool
 	mtg = mergetool --gui
@@ -47,9 +46,9 @@
 	ps = push
 	r = rebase
 	rc = rebase --continue
-	recentbr = !git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' # get list branches ordered by most recent commit
+	recentbr = !git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' # get list of branches ordered by most recent commit
 	rlast = "!f() { git rebase -i HEAD~$1; }; f" # rebase the given number of latest commits
-	rt = remote -v
+	rt = remote --verbose
 	s = status -s # view status using short format
 	sa = stash apply
 	sd = stash drop
