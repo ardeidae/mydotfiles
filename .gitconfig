@@ -137,6 +137,11 @@
 	# specify the command to invoke the specified diff tool
 	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
 
+[format]
+
+	# default pretty format to use
+	pretty = custom
+
 [grep]
 
 	# prefix the line number to matching lines
@@ -204,6 +209,15 @@
 	# specify the exit code of the merge command cannot be used to
 	# determine whether the merge was successful
 	trustExitCode = false
+
+[pretty]
+
+	custom = "%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
+	#               │                    │        │            │                 └─ author name
+	#               │                    │        │            └─ date (relative)
+	#               │                    │        └─ message
+	#               │                    └─ decorations (branch, heads or tags)
+	#               └─ hash (abbreviated)
 
 [protocol]
 
