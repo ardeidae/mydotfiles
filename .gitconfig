@@ -12,27 +12,78 @@
 
 [alias]
 
-	br = branch
+	aliases = !git config --get-regexp alias |cut -c 7-|sort
+
+	a = add
+	am = commit -v --amend
+	ap = add --patch
+	bl = blame
+	br = branch -v
 	ci = commit -v
 	co = checkout
-	cp = cherry-pick
+	contrib = shortlog --email --summary --numbered # list contributors with number of commits
+	cp = cherry-pick -x
 	d = diff
 	dc = diff --cached
-	wd = diff --word-diff=color
-	wdc = diff --word-diff=color --cached
-	g = grep -I
-	lg = log -p
-	# view status using short format
-	s = status -s
-	st = status
-	f = fetch
+	dl = diff HEAD^ # diff last committed change
 	dt = difftool
 	dtg = difftool --gui
+	ec = config --global --edit
+	f = fetch
+	fc = "!f() { git log --name-status -S$1; }; f" # find commits by source code
+	fm = "!f() { git log --name-status --grep=$1; }; f" # find commits by commit message
+	g = grep -I
+	l = log
+	lf = log -u # file log: show changes to a file
+	lg = log --graph
+	lga = log --all --graph
+	ll = log -n 10
+	lp = log -p
+	m = merge
 	mt = mergetool
 	mtg = mergetool --gui
-	ec = config --global --edit
-	graph = log --oneline --all --graph --decorate
-	oneline = log --oneline -n 20
+	nb = checkout -b # new branch, or just checkout it
+	pl = pull
+	ps = push
+	r = rebase
+	rc = rebase --continue
+	recentbr = !git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' # get list branches ordered by most recent commit
+	rlast = "!f() { git rebase -i HEAD~$1; }; f" # rebase the given number of latest commits
+	rt = remote -v
+	s = status -s # view status using short format
+	sa = stash apply
+	sd = stash drop
+	sl = stash list
+	ss = stash
+	st = status
+	unstage = reset HEAD # remove files from index
+	wd = diff --word-diff=color
+	wdc = diff --word-diff=color --cached
+
+	# credit an author on the latest commit
+	credit = "!f() { \
+		if [ -n \"$1\" ] && [ -n \"$2\" ]; then \
+		git commit --amend --author \"$1 <$2>\" -C HEAD; \
+		fi \
+		}; f"
+
+	# list remote branches
+	lrb = "!f() { \
+		remote="${1:-origin}"; \
+		git ls-remote --heads "$remote"; \
+		}; f"
+
+	# remove last commits (last commit by default)
+	rlc = "!f() { \
+		declare n=\"${1:-1}\"; \
+		git reset --hard \"HEAD~$n\"; \
+		}; f"
+
+	# undo last commits (last commit by default)
+	ulc = "!f() { \
+		declare n=\"${1:-1}\"; \
+		git reset --soft \"HEAD~$n\"; \
+		}; f"
 
 [apply]
 
@@ -213,8 +264,8 @@
 [pretty]
 
 	custom = "%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
-	#               │                    │        │            │                 └─ author name
-	#               │                    │        │            └─ date (relative)
+	#               │                    │        │           │                  └─ author name
+	#               │                    │        │           └─ date (relative)
 	#               │                    │        └─ message
 	#               │                    └─ decorations (branch, heads or tags)
 	#               └─ hash (abbreviated)
