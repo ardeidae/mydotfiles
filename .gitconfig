@@ -228,6 +228,10 @@
 	# create an extra merge commit, force explicit call of git merge --ff
 	ff = false
 
+	# include summaries of merged commits in newly created merge commit
+	# messages
+	log = 1000
+
 [mergetool]
 
 	# do not prompt before each invocation of the merge resolution program
