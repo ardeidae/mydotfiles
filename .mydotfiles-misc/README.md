@@ -48,6 +48,7 @@ git config user.email "me@tld.com"
 * `ci`: commit in verbose mode ;
 * `co`: checkout ;
 * `contrib`: show contributors and their numbers of commits ;
+* `conflicts`: show files in conflict state ;
 * `cp`: cherry-pick and append a line that says "cherry picked from commit" ;
 * `credit`: amend the last commit with "A Name" "an.email@tld.com" ;
 * `d`: make a diff ;

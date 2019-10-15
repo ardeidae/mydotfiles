@@ -21,6 +21,7 @@
 	br = branch --verbose
 	ci = commit --verbose
 	co = checkout
+	conflicts = diff --name-only --diff-filter=U
 	contrib = shortlog --email --summary --numbered # list contributors with number of commits
 	cp = cherry-pick -x
 	d = diff
