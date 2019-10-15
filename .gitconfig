@@ -116,6 +116,11 @@
 	changed = magenta white reverse bold
 	untracked = blue white reverse bold
 
+[commit]
+
+	# file to use as the template for new commit messages
+	template = ~/.gitmessage
+
 [core]
 
 	# editor used to edit commit and tag messages
