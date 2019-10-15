@@ -46,6 +46,7 @@
 	ps = push
 	r = rebase
 	rc = rebase --continue
+	rp = reset --patch
 	recentbr = !git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' # get list of branches ordered by most recent commit
 	rlast = "!f() { git rebase -i HEAD~$1; }; f" # rebase the given number of latest commits
 	rt = remote --verbose

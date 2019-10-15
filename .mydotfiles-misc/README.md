@@ -74,6 +74,7 @@ git config user.email "me@tld.com"
 * `ps`: push ;
 * `r`: rebase ;
 * `rc`: continue rebase ;
+* `rp`: reset in patch mode ;
 * `recentbr`: get list of branches ordered by most recent commit ;
 * `rlast`: rebase the given number of latests commits ;
 * `rlc`: remove the given number of last commits, the last by default ;
