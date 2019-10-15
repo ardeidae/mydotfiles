@@ -15,7 +15,7 @@
 	aliases = !git config --get-regexp alias |cut -c 7-|sort
 
 	a = add
-	am = commit --verbose --amend
+	amend = commit --verbose --amend
 	ap = add --patch
 	bl = blame
 	br = branch --verbose
