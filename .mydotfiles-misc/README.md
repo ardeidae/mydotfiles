@@ -41,7 +41,7 @@ git config user.email "me@tld.com"
 
 * `a`: add ;
 * `aliases`: list aliases ;
-* `am`: commit and amend in verbose mode ;
+* `amend`: commit and amend in verbose mode ;
 * `ap`: add in patch mode ;
 * `bl`: blame ;
 * `br`: list branches in verbose mode ;
