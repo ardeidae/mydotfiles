@@ -53,6 +53,7 @@
 	sa = stash apply
 	sd = stash drop
 	sl = stash list
+	sp = stash pop
 	ss = stash
 	st = status
 	unstage = reset HEAD # remove files from index

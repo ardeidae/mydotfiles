@@ -82,6 +82,7 @@ git config user.email "me@tld.com"
 * `sa`: apply a stash ;
 * `sd`: drop a stash ;
 * `sl`: list stashes ;
+* `sp`: pop a stash ;
 * `ss`: stash ;
 * `st`: show status ;
 * `ulc`: undo the given number of last commits, the last by default ;
