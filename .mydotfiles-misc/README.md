@@ -18,7 +18,7 @@ So, here are some options that can prevent 99% of merge problems.
 * `pull.ff = only` because when you pull, you don't want to merge to keep a clean and straight history.
 * `pull.rebase = merges` because when you pull, if a fast-forward is not possible, you want to rebase to keep a clean and straight history, too.
 
-### Setting your identity
+### Your identity
 
 Your name must be set in the `~/.gitconfig.local` file.
 ```
