@@ -16,6 +16,10 @@ let mapleader=","
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+nnoremap <leader>bi :PlugInstall<CR>
+nnoremap <leader>bu :PlugUpdate<CR>
+nnoremap <leader>bc :PlugClean<CR>
+
 " plugins {{{
 
 " colorschemes {{{
