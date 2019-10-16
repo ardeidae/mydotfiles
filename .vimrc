@@ -34,6 +34,36 @@ Plug 'cormacrelf/vim-colors-github'
 Plug 'morhetz/gruvbox'
 " a port of the monokai scheme for TextMate
 Plug 'tomasr/molokai'
+"
+" NERDTree {{{
+" A tree explorer plugin for vim
+Plug 'scrooloose/nerdtree'
+" change the NERDTree directory to the root node
+let NERDTreeChDirMode=2
+" store the bookmarks file
+let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
+" show the bookmarks table on startup
+let NERDTreeShowBookmarks=1
+" show hidden files
+let NERDTreeShowHidden=1
+" highlight the selected entry in the tree
+let NERDTreeHighlightCursorline=1
+" single click to fold/unfold directories and double click to open files
+let NERDTreeMouseMode=2
+" do not show line numbers
+let NERDTreeShowLineNumbers=0
+" nerdtree window width
+let NERDTreeWinSize=30
+" NERDTree recursively opens dirs that have only one child which is also a dir
+let NERDTreeCasadeOpenSingleChildDir=1
+" don't display these kinds of files
+let NERDTreeIgnore=[ '\.class$', '\.o$', '^\.git$', '^\.svn$' ]
+
+nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>nm :NERDTreeMirror<CR>
+nnoremap <leader>nn :NERDTreeToggle<CR>
+nnoremap <leader>nv :NERDTreeVCS<CR>
+" }}}
 
 " }}}
 
@@ -443,7 +473,20 @@ if has("autocmd")
 	autocmd BufRead,BufNewFile *.txt setfiletype text
 	" readonly on log files
 	autocmd BufRead *.log* setlocal readonly nowrap
+	" open a NERDTree automatically when vim starts up
+	" autocmd VimEnter * NERDTree
 
 endif
 
+" }}}
+
+" :%!python -m json.tool
+" command JsonParse execute '%!python -m json.tool' | w
+" map <leader>j JsonParse
+
+" reminder {{{
+" http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
+" http://vim.wikia.com/wiki/Macros
+" :h c_CTRL-F to switch to command-line window
+" :h CTRL-^ to open previously edited file
 " }}}
