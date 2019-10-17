@@ -192,6 +192,8 @@ if &diff
     silent! colorscheme github
 else
     " set another colorscheme
+    " for light version of theme
+    " let ayucolor="light"
     " for mirage version of theme
     let ayucolor="mirage"
     silent! colorscheme ayu
