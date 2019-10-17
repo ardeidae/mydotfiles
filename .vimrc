@@ -139,8 +139,10 @@ set tabpagemax=1000
 set autoread
 " show as much as possible of the last line
 set display+=lastline
-" Delete comment character when joining commented line
-set formatoptions+=j
+" delete comment character when joining commented line
+if has('patch-7.3.541')
+	set formatoptions+=j
+endif
 
 " }}}
 
@@ -215,7 +217,7 @@ set splitright
 set history=1000
 " levels of undo
 set undolevels=1000
-if v:version >= 703
+if has('persistent_undo')
 	" use undofile
 	set undofile
 	set undodir=~/.vim/tmp/undo
