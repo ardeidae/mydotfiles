@@ -41,6 +41,12 @@ Plug 'tomasr/molokai'
 Plug 'vim-airline/vim-airline'
 " }}}
 
+" vim-gitgutter {{{
+" A Vim plugin which shows a git diff in the gutter (sign column) and
+" stages/undoes hunks and partial hunks.
+Plug 'airblade/vim-gitgutter'
+" }}}
+
 " vim-startify {{{
 " The fancy start screen for Vim.
 Plug 'mhinz/vim-startify'
