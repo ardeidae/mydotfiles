@@ -69,6 +69,16 @@ nnoremap <leader>nn :NERDTreeToggle<CR>
 nnoremap <leader>nv :NERDTreeVCS<CR>
 " }}}
 
+" nerdcommenter {{{
+" Vim plugin for intensely orgasmic commenting
+" https://github.com/scrooloose/nerdcommenter
+Plug 'scrooloose/nerdcommenter'
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" }}}
+
 " }}}
 
 " }}}
