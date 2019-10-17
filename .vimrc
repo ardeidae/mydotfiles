@@ -26,8 +26,6 @@ nnoremap <leader>bc :PlugClean<CR>
 
 " modern theme for modern VIMs
 Plug 'ayu-theme/ayu-vim'
-" summerfruit color scheme in 256 colors
-Plug 'baeuml/summerfruit256.vim'
 " A Vim colorscheme based on Github's syntax highlighting as of 2018.
 Plug 'cormacrelf/vim-colors-github'
 " Retro groove color scheme for Vim
@@ -38,6 +36,10 @@ Plug 'tomasr/molokai'
 " }}}
 
 " tools {{{
+
+" airline {{{
+Plug 'vim-airline/vim-airline'
+" }}}
 
 " Startify {{{
 " The fancy start screen for Vim.
