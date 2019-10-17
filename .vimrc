@@ -30,23 +30,23 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'cormacrelf/vim-colors-github'
 " Retro groove color scheme for Vim
 Plug 'morhetz/gruvbox'
-" a port of the monokai scheme for TextMate
+" A port of the monokai scheme for TextMate
 Plug 'tomasr/molokai'
 
 " }}}
 
 " tools {{{
 
-" airline {{{
+" vim-airline {{{
 Plug 'vim-airline/vim-airline'
 " }}}
 
-" Startify {{{
+" vim-startify {{{
 " The fancy start screen for Vim.
 Plug 'mhinz/vim-startify'
 " }}}
 
-" NERDTree {{{
+" nerdtree {{{
 " A tree explorer plugin for vim
 Plug 'scrooloose/nerdtree'
 " change the NERDTree directory to the root node
@@ -86,7 +86,7 @@ let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 " }}}
 
-" ctrlp {{{
+" ctrlp.vim {{{
 " Fuzzy file, buffer, mru, tag, etc finder.
 " https://github.com/ctrlpvim/ctrlp.vim
 Plug 'ctrlpvim/ctrlp.vim'
