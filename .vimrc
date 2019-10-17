@@ -39,6 +39,11 @@ Plug 'tomasr/molokai'
 
 " tools {{{
 
+" Startify {{{
+" The fancy start screen for Vim.
+Plug 'mhinz/vim-startify'
+" }}}
+
 " NERDTree {{{
 " A tree explorer plugin for vim
 Plug 'scrooloose/nerdtree'
