@@ -3,9 +3,9 @@ set nocompatible
 
 " vim-plug installation
 if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " Set leader to , must come before any <leader> mappings
@@ -143,10 +143,10 @@ set diffopt+=filler
 " diff in vertical splits
 set diffopt+=vertical
 if has("patch-8.1.0360")
-	" use histogram algorithm for diff
-	set diffopt+=algorithm:histogram
-	" use indent heuristic for diff
-	set diffopt+=indent-heuristic
+    " use histogram algorithm for diff
+    set diffopt+=algorithm:histogram
+    " use indent heuristic for diff
+    set diffopt+=indent-heuristic
 endif
 " ~ command behaves like an operator
 set tildeop
@@ -154,7 +154,7 @@ set tildeop
 set nostartofline
 " spell checkin
 if has('spell')
-	set spelllang=fr
+    set spelllang=fr
 endif
 " max number of tab opened with the -p option command line argument
 set tabpagemax=1000
@@ -164,7 +164,7 @@ set autoread
 set display+=lastline
 " delete comment character when joining commented line
 if has('patch-7.3.541')
-	set formatoptions+=j
+    set formatoptions+=j
 endif
 
 " }}}
@@ -172,41 +172,42 @@ endif
 " graphical {{{
 
 if has('syntax')
-	syntax enable
+    syntax enable
 endif
 
 if has('gui_running')
-	" show GUI tabs
-	set guioptions=e
+    " show GUI tabs
+    set guioptions=e
 endif
 
 if (has("termguicolors"))
-	" enable true colors support
-	set termguicolors
+    " enable true colors support
+    set termguicolors
 endif
 
 if &diff
-	" use a slightly darker background
-	let g:github_colors_soft = 1
-	" set a colorscheme improved for diff
-	silent! colorscheme github
+    " use a slightly darker background
+    let g:github_colors_soft = 1
+    " set a colorscheme improved for diff
+    silent! colorscheme github
 else
-	" set another colorscheme
-	let ayucolor="mirage" " for mirage version of theme
-	silent! colorscheme ayu
+    " set another colorscheme
+    " for mirage version of theme
+    let ayucolor="mirage"
+    silent! colorscheme ayu
 
 endif
 
 if exists('+cursorline')
-	" show current line
-	set cursorline
+    " show current line
+    set cursorline
 endif
 
 " hide the mouse pointer while typing
 set mousehide
 if has('mouse')
-	" mouse activation
-	set mouse=a
+    " mouse activation
+    set mouse=a
 endif
 
 " show line number
@@ -241,9 +242,9 @@ set history=1000
 " levels of undo
 set undolevels=1000
 if has('persistent_undo')
-	" use undofile
-	set undofile
-	set undodir=~/.vim/tmp/undo
+    " use undofile
+    set undofile
+    set undodir=~/.vim/tmp/undo
 endif
 
 " }}}
@@ -310,13 +311,13 @@ set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 " set a nicer foldtext function
 set foldtext=MyFoldText()
 function MyFoldText()
-	let nucolwidth = &fdc + &number*&numberwidth
-	let winwd = winwidth(0) - nucolwidth - 10
-	let foldlinecount = foldclosedend(v:foldstart) - foldclosed(v:foldstart) + 1
-	let fdnfo = string(v:foldlevel) . ", " . string(foldlinecount) . " "
-	let line =  strpart(getline(v:foldstart), 0 , winwd - len(fdnfo))
-	let fillcharcount = winwd - len(line) - len(fdnfo)
-	return line . repeat(" ",fillcharcount) . fdnfo
+    let nucolwidth = &fdc + &number*&numberwidth
+    let winwd = winwidth(0) - nucolwidth - 10
+    let foldlinecount = foldclosedend(v:foldstart) - foldclosed(v:foldstart) + 1
+    let fdnfo = string(v:foldlevel) . ", " . string(foldlinecount) . " "
+    let line =  strpart(getline(v:foldstart), 0 , winwd - len(fdnfo))
+    let fillcharcount = winwd - len(line) - len(fdnfo)
+    return line . repeat(" ",fillcharcount) . fdnfo
 endfunction
 
 " }}}
@@ -325,22 +326,22 @@ endfunction
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
-	nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+    nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
 " disable search display
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 function! Preserve(command)
-	" Preparation: save last search, and cursor position.
-	let _s=@/
-	let l=line(".")
-	let c=col(".")
-	" do the business:
-	execute a:command
-	" clean up: restore previous search history, and cursor position
-	let @/=_s
-	call cursor(l, c)
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l=line(".")
+    let c=col(".")
+    " do the business:
+    execute a:command
+    " clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
 endfunction
 
 " remove trailing whitespaces
@@ -354,39 +355,39 @@ command! ReIndent call Preserve("normal gg=G<C-o><C-o>zz")
 
 " switch between number, relative number and no number
 function! g:ToggleNumberMode()
-	if exists('+relativenumber')
-		if &relativenumber
-			set norelativenumber
-			set number
-			set number?
-		elseif &number
-			set nonumber
-			set nonumber?
-		else
-			set relativenumber
-			set relativenumber?
-		endif
-	else
-		if &number
-			set nonumber
-			set nonumber?
-		else
-			set number
-			set number?
-		endif
-	endif
+    if exists('+relativenumber')
+        if &relativenumber
+            set norelativenumber
+            set number
+            set number?
+        elseif &number
+            set nonumber
+            set nonumber?
+        else
+            set relativenumber
+            set relativenumber?
+        endif
+    else
+        if &number
+            set nonumber
+            set nonumber?
+        else
+            set number
+            set number?
+        endif
+    endif
 endfunc
 
 " switch virtual edit
 function! g:ToggleVirtualEdit()
-	if &virtualedit=='all'
-		" disable virtual edit
-		set virtualedit=
-	else
-		" edit anywhere
-		set virtualedit=all
-	endif
-	set virtualedit?
+    if &virtualedit=='all'
+        " disable virtual edit
+        set virtualedit=
+    else
+        " edit anywhere
+        set virtualedit=all
+    endif
+    set virtualedit?
 endfunc
 
 " }}}
@@ -406,8 +407,8 @@ nnoremap <F1> :set invlist<CR>:set list?<CR>
 nnoremap <silent> <F2> :call g:ToggleNumberMode()<CR>
 
 if has('spell')
-	" enable / disable spell checking
-	nnoremap <silent> <F4> :set invspell<CR>:set spell?<CR>
+    " enable / disable spell checking
+    nnoremap <silent> <F4> :set invspell<CR>:set spell?<CR>
 endif
 
 " enable / disable wrapping
@@ -481,33 +482,33 @@ map <leader>cq :cquit<CR>
 
 " only do this part when compiled with support for autocommands
 if has("autocmd")
-	" strip trailing white spaces on write
-	autocmd BufWritePre * :StripTrailingWhiteSpaces
+    " strip trailing white spaces on write
+    autocmd BufWritePre * :StripTrailingWhiteSpaces
 
-	autocmd Filetype make setlocal noexpandtab
-	autocmd Filetype gitconfig setlocal noexpandtab
-	autocmd FileType yaml setlocal expandtab
-	autocmd Filetype less,css setlocal iskeyword+=-
-	autocmd Filetype php setlocal iskeyword+=$
-	" text formatting {{{
-	" gqip to format paragraph, see :h text-objects
-	" t: Auto-wrap text using textwidth
-	" w: Trailing white space indicates a paragraph continues in the next
-	" line. A line that ends in a non-white character ends a paragraph.
-	" a: Automatic formatting of paragraphs.  Every time text is inserted or
-	" deleted the paragraph will be reformatted. When the 'c' flag is present
-	" this only happens for recognized comments.
-	" }}}
-	autocmd FileType text setlocal textwidth=80 formatoptions+=twa
+    autocmd Filetype make setlocal noexpandtab
+    autocmd Filetype gitconfig setlocal noexpandtab
+    autocmd FileType yaml setlocal expandtab
+    autocmd Filetype less,css setlocal iskeyword+=-
+    autocmd Filetype php setlocal iskeyword+=$
+    " text formatting {{{
+    " gqip to format paragraph, see :h text-objects
+    " t: Auto-wrap text using textwidth
+    " w: Trailing white space indicates a paragraph continues in the next
+    " line. A line that ends in a non-white character ends a paragraph.
+    " a: Automatic formatting of paragraphs.  Every time text is inserted or
+    " deleted the paragraph will be reformatted. When the 'c' flag is present
+    " this only happens for recognized comments.
+    " }}}
+    autocmd FileType text setlocal textwidth=80 formatoptions+=twa
 
-	" treat .rss files as XML
-	autocmd BufNewFile,BufRead *.rss setfiletype xml
-	" recognize *.txt as text files.
-	autocmd BufRead,BufNewFile *.txt setfiletype text
-	" readonly on log files
-	autocmd BufRead *.log* setlocal readonly nowrap
-	" open a NERDTree automatically when vim starts up
-	" autocmd VimEnter * NERDTree
+    " treat .rss files as XML
+    autocmd BufNewFile,BufRead *.rss setfiletype xml
+    " recognize *.txt as text files.
+    autocmd BufRead,BufNewFile *.txt setfiletype text
+    " readonly on log files
+    autocmd BufRead *.log* setlocal readonly nowrap
+    " open a NERDTree automatically when vim starts up
+    " autocmd VimEnter * NERDTree
 
 endif
 
