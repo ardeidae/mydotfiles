@@ -34,7 +34,11 @@ Plug 'cormacrelf/vim-colors-github'
 Plug 'morhetz/gruvbox'
 " a port of the monokai scheme for TextMate
 Plug 'tomasr/molokai'
-"
+
+" }}}
+
+" tools {{{
+
 " NERDTree {{{
 " A tree explorer plugin for vim
 Plug 'scrooloose/nerdtree'
