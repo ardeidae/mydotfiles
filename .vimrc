@@ -134,6 +134,8 @@ set tabpagemax=1000
 set autoread
 " show as much as possible of the last line
 set display+=lastline
+" Delete comment character when joining commented line
+set formatoptions+=j
 
 " }}}
 
