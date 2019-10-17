@@ -96,6 +96,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
+set expandtab
 " allow backspacing over indent, eol, and the start of an insert
 set backspace=indent,eol,start
 " copy indent from current line when starting a new line
@@ -459,6 +460,7 @@ if has("autocmd")
 	autocmd BufWritePre * :StripTrailingWhiteSpaces
 
 	autocmd Filetype make setlocal noexpandtab
+	autocmd Filetype gitconfig setlocal noexpandtab
 	autocmd FileType yaml setlocal expandtab
 	autocmd Filetype less,css setlocal iskeyword+=-
 	autocmd Filetype php setlocal iskeyword+=$
