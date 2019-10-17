@@ -79,6 +79,12 @@ let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 " }}}
 
+" ctrlp {{{
+" Fuzzy file, buffer, mru, tag, etc finder.
+" https://github.com/ctrlpvim/ctrlp.vim
+Plug 'ctrlpvim/ctrlp.vim'
+" }}}
+
 " }}}
 
 " }}}
