@@ -55,26 +55,32 @@ Plug 'mhinz/vim-startify'
 " nerdtree {{{
 " A tree explorer plugin for vim
 Plug 'scrooloose/nerdtree'
-" change the NERDTree directory to the root node
-let NERDTreeChDirMode=2
 " store the bookmarks file
 let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
-" show the bookmarks table on startup
-let NERDTreeShowBookmarks=1
-" show hidden files
-let NERDTreeShowHidden=1
+" the bookmarks list is sorted in a case-sensitive manner
+let NERDTreeBookmarksSort=2
+" NERDTree recursively opens dirs that have only one child which is also a dir
+let NERDTreeCascadeOpenSingleChildDir=1
+" sort case sensitively
+let NERDTreeCaseSensitiveSort=1
+" change the NERDTree directory to the root node
+let NERDTreeChDirMode=2
 " highlight the selected entry in the tree
 let NERDTreeHighlightCursorline=1
 " single click to fold/unfold directories and double click to open files
 let NERDTreeMouseMode=2
+" sort in natural order
+let NERDTreeNaturalSort=1
+" respect wildignore
+let NERDTreeRespectWildIgnore=1
+" show the bookmarks table on startup
+let NERDTreeShowBookmarks=1
+" show hidden files
+let NERDTreeShowHidden=1
 " do not show line numbers
 let NERDTreeShowLineNumbers=0
 " nerdtree window width
 let NERDTreeWinSize=30
-" NERDTree recursively opens dirs that have only one child which is also a dir
-let NERDTreeCasadeOpenSingleChildDir=1
-" don't display these kinds of files
-let NERDTreeIgnore=[ '\.class$', '\.o$', '^\.git$', '^\.svn$' ]
 
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nm :NERDTreeMirror<CR>
