@@ -185,6 +185,8 @@ set tabpagemax=1000
 set autoread
 " show as much as possible of the last line
 set display+=lastline
+" wrap comments
+set formatoptions+=croq
 " delete comment character when joining commented line
 if has('patch-7.3.541')
     set formatoptions+=j
