@@ -1,20 +1,43 @@
 " Vi IMproved
 set nocompatible
 
+" the vim root directory
+let s:vim_dir = expand('~/.vim')
+
+" declare some paths variables
+let s:plugin_dir = s:vim_dir . '/plugged'
+let s:backup_dir = s:vim_dir . '/tmp/backup'
+let s:undo_dir = s:vim_dir . '/tmp/undo'
+let s:swap_dir = s:vim_dir . '/tmp/swap'
+
+" create the paths, if needed
+if !isdirectory(expand(s:plugin_dir))
+    call mkdir(s:plugin_dir, 'p')
+endif
+if !isdirectory(expand(s:backup_dir))
+    call mkdir(s:backup_dir, 'p', 0700)
+endif
+if !isdirectory(expand(s:undo_dir))
+    call mkdir(s:undo_dir, 'p', 0700)
+endif
+if !isdirectory(expand(s:swap_dir))
+    call mkdir(s:swap_dir, 'p', 0700)
+endif
+
 " vim-plug installation
-if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl --silent -fLo ~/.vim/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if empty(glob(s:vim_dir . '/autoload/plug.vim'))
+    silent execute '!curl --silent -fLo ' . s:vim_dir . '/autoload/plug.vim
+        \ --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " Set leader to , must come before any <leader> mappings
 let mapleader=","
 
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
+" Specify a directory for plugins, avoid using standard Vim directory names
+" like 'plugin'.
+call plug#begin(s:plugin_dir)
 
 nnoremap <leader>bi :PlugInstall<CR>
 nnoremap <leader>bu :PlugUpdate<CR>
@@ -56,7 +79,7 @@ Plug 'mhinz/vim-startify'
 " A tree explorer plugin for vim
 Plug 'scrooloose/nerdtree'
 " store the bookmarks file
-let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
+let NERDTreeBookmarksFile=s:vim_dir . '/NERDTreeBookmarks'
 " the bookmarks list is sorted in a case-sensitive manner
 let NERDTreeBookmarksSort=2
 " NERDTree recursively opens dirs that have only one child which is also a dir
@@ -271,7 +294,7 @@ set undolevels=1000
 if has('persistent_undo')
     " use undofile
     set undofile
-    set undodir=~/.vim/tmp/undo
+    let &undodir=s:undo_dir
 endif
 
 " }}}
@@ -279,11 +302,11 @@ endif
 " backup {{{
 
 " swapfile directory
-set directory=~/.vim/tmp/swap
+let &directory=s:swap_dir
 " keep backup file
 set backup
 set writebackup
-set backupdir=~/.vim/tmp/backup
+let &backupdir=s:backup_dir
 
 " }}}
 
