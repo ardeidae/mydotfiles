@@ -90,12 +90,23 @@ nnoremap <leader>nv :NERDTreeVCS<CR>
 
 " nerdcommenter {{{
 " Vim plugin for intensely orgasmic commenting
-" https://github.com/scrooloose/nerdcommenter
 Plug 'scrooloose/nerdcommenter'
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
+" lines outside the right boundary of the selection block will be commented
+let NERDBlockComIgnoreEmpty=0
+" allow commenting and inverting empty lines (useful when commenting a region)
+let NERDCommentEmptyLines=1
+" in visual mode (v), whole lines are commented
+let NERDCommentWholeLinesInVMode=1
+" comments are aligned on the left
+let NERDDefaultAlign='left'
+" remove alternative comment
+let NERDRemoveAltComs=1
+" remove extra spaces when uncommenting
+let NERDRemoveExtraSpaces=1
+" add spaces after comment delimiters by default
+let NERDSpaceDelims=1
+" any trailing whitespace will be deleted when uncommenting a line
+let NERDTrimTrailingWhitespace=1
 " }}}
 
 " ctrlp.vim {{{
