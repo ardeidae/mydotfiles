@@ -452,6 +452,11 @@ nnoremap <silent> Q <Nop>
 " disable F1 key (help)
 inoremap <F1> <Esc>
 vnoremap <F1> <Esc>
+
+" navigation between windows, with tab ans shift-tab in normal mode
+nnoremap <tab> <c-w>w
+nnoremap <S-tab> <c-w>W
+
 " switch list
 nnoremap <F1> :set invlist<CR>:set list?<CR>
 
