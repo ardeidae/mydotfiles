@@ -172,6 +172,8 @@ set backspace=indent,eol,start
 set autoindent
 " keyword completion
 set complete=.,w,b,u,t,i,U,kspell
+" insert the longest common text of the matches
+set completeopt+=longest
 " only one space on joined lines
 set nojoinspaces
 " change the terminal's title
