@@ -138,6 +138,22 @@ let NERDTrimTrailingWhitespace=1
 Plug 'ctrlpvim/ctrlp.vim'
 " }}}
 
+" syntastic {{{
+" Syntax checking hacks for vim
+Plug 'vim-syntastic/syntastic'
+" aggregate errors from differents checkers
+let g:syntastic_aggregate_errors=1
+" the error window will be automatically opened when errors are detected, and
+" closed when none are detected
+let g:syntastic_auto_loc_list=1
+" run syntax checks on file load
+let g:syntastic_check_on_open=1
+" passive checking for somes filetypes, to check, :SyntasticCheck.
+let g:syntastic_mode_map = { 'mode': 'active',
+            \ 'active_filetypes': [],
+            \ 'passive_filetypes': ['java', 'c', 'cpp'] }
+" }}}
+
 " }}}
 
 " }}}
