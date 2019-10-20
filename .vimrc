@@ -154,6 +154,14 @@ let g:syntastic_mode_map = { 'mode': 'active',
             \ 'passive_filetypes': ['java', 'c', 'cpp'] }
 " }}}
 
+" tagbar {{{
+if has('patch-7.3.1058')
+    Plug 'majutsushi/tagbar'
+    " width of the tagbar window
+    let g:tagbar_width = 30
+    " on single click, jump to tag definition
+    let g:tagbar_singleclick = 1
+endif
 " }}}
 
 " }}}
@@ -493,6 +501,11 @@ set pastetoggle=<F5>
 " enable / disable virtual edit.
 nnoremap <silent> <F6> :call g:ToggleVirtualEdit()<CR>
 
+if has('patch-7.3.1058')
+    " toggle tagbar
+    nnoremap <silent> <F7> :TagbarToggle<CR>
+endif
+
 " Underline the current line with '='
 nnoremap <silent> <leader>u= yypVr=
 nnoremap <silent> <leader>u- yypVr-
@@ -582,6 +595,11 @@ if has("autocmd")
     autocmd BufRead *.log* setlocal readonly nowrap
     " open a NERDTree automatically when vim starts up
     " autocmd VimEnter * NERDTree
+
+    if has('patch-7.3.1058')
+        " open tagbar for supported filetypes
+        autocmd FileType * nested :call tagbar#autoopen(0)
+    endif
 
 endif
 
