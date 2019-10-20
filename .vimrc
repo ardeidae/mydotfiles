@@ -479,19 +479,19 @@ nnoremap <F1> :set invlist<CR>:set list?<CR>
 " switch between number and relative number
 nnoremap <silent> <F2> :call g:ToggleNumberMode()<CR>
 
+" enable / disable wrapping
+nnoremap <silent> <F3> :set invwrap<CR>:set wrap?<CR>
+
 if has('spell')
     " enable / disable spell checking
     nnoremap <silent> <F4> :set invspell<CR>:set spell?<CR>
 endif
 
-" enable / disable wrapping
-nnoremap <silent> <F5> :set invwrap<CR>:set wrap?<CR>
-
 " toggle paste mode
-set pastetoggle=<F7>
+set pastetoggle=<F5>
 
 " enable / disable virtual edit.
-nnoremap <silent> <F8> :call g:ToggleVirtualEdit()<CR>
+nnoremap <silent> <F6> :call g:ToggleVirtualEdit()<CR>
 
 " Underline the current line with '='
 nnoremap <silent> <leader>u= yypVr=
