@@ -240,6 +240,8 @@ set formatoptions+=croq
 if has('patch-7.3.541')
     set formatoptions+=j
 endif
+" change the update time, usefull for tagbar, gitgutter, etc
+set updatetime=100
 
 " }}}
 
