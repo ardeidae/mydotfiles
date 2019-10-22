@@ -61,9 +61,92 @@ Plug 'tomasr/molokai'
 " tools {{{
 
 " vim-airline {{{
+" lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline'
+" show buffer label at first position:
+let g:airline#extensions#tabline#buf_label_first = 1
+" change label for tabs and buffers
+let g:airline#extensions#tabline#buffers_label = 'buf'
+let g:airline#extensions#tabline#tabs_label = 'tab'
 " enable enhanced tabline
 let g:airline#extensions#tabline#enabled = 1
+" how buffer names are displayed, will smartly uniquify buffers names with
+" similar filename, suppressing common parts of paths.
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+" straight tabs for tabline using | separator
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+" enable displaying buffers with a single tab
+let g:airline#extensions#tabline#show_buffers = 1
+" hide close button
+let g:airline#extensions#tabline#show_close_button = 0
+" enable displaying open splits per tab (only when tabs are opened)
+let g:airline#extensions#tabline#show_splits = 1
+" display number of tabs on the right side
+let g:airline#extensions#tabline#show_tab_count = 1
+" display tabs regardless of number
+let g:airline#extensions#tabline#show_tabs = 1
+" configure how numbers are displayed in tab mode: splits and tab number
+let g:airline#extensions#tabline#tab_nr_type = 2
+
+" enable terminal integration
+let g:airline#extensions#term#enabled = 1
+
+" enable modified detection
+let g:airline_detect_modified = 1
+" enable paste detection
+let g:airline_detect_paste = 1
+" enable spell detection
+let g:airline_detect_spell = 1
+" display spelling language when spell detection is enabled
+let g:airline_detect_spelllang = 1
+" disable powerline fonts
+let g:airline_powerline_fonts = 0
+
+" truncate all path sections but the last one, a branch 'foo/bar/baz' becomes
+" 'f/b/baz'
+let g:airline#extensions#branch#format = 2
+" truncate sha1 commits to 10 chars
+let g:airline#extensions#branch#sha1_len = 10
+" no check about untracked files or dirty state
+let g:airline#extensions#branch#vcs_checks = []
+
+" enable syntastic integration
+let g:airline#extensions#syntastic#enabled = 1
+
+" enable tagbar integration
+let g:airline#extensions#tagbar#enabled = 1
+" display the full hierarchy of the tag, not just the tag itself.
+" if function, show complete signature
+let g:airline#extensions#tagbar#flags = 'f,s'
+
+" enable virtualenv integration
+let g:airline#extensions#virtualenv#enabled = 1
+
+" enable detection of whitespace errors
+let g:airline#extensions#whitespace#enabled = 1
+" spaces are allowed after tabs, but not in between
+" this algorithm works well with programming styles that use tabs for
+" indentation and spaces for alignment
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
+" configure which whitespace checks to enable.
+" indent: mixed indent within a line
+" long: overlong lines
+" trailing: trailing whitespace
+" mixed-indent-file: different indentation in different lines
+" conflicts: checks for conflict markers
+let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing', 'long', 'mixed-indent-file', 'conflicts' ]
+" configure the maximum number of lines where whitespace checking is enabled.
+let g:airline#extensions#whitespace#max_lines = 50000
+
+" enable YCM integration
+let g:airline#extensions#ycm#enabled = 1
+
+" enable/disable showing a summary of changed hunks under source control. >
+let g:airline#extensions#hunks#enabled = 1
+" enable/disable showing only non-zero hunks. >
+let g:airline#extensions#hunks#non_zero_only = 0
+
 " }}}
 
 " vim-gitgutter {{{
