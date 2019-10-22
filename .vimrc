@@ -62,6 +62,8 @@ Plug 'tomasr/molokai'
 
 " vim-airline {{{
 Plug 'vim-airline/vim-airline'
+" enable enhanced tabline
+let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 " vim-gitgutter {{{
