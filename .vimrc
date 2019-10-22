@@ -174,6 +174,12 @@ endif
 
 " }}}
 
+" vim-fugitive {{{
+" fugitive.vim: a Git wrapper so awesome, it should be illegal
+" https://github.com/tpope/vim-fugitive
+Plug 'tpope/vim-fugitive'
+" }}}
+
 " Initialize plugin system
 call plug#end()
 
