@@ -606,6 +606,9 @@ if has("autocmd")
     " open a NERDTree automatically when vim starts up
     " autocmd VimEnter * NERDTree
 
+    " close vim if the only window left open is a NERDTree
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
     if has('patch-7.3.1058')
         " open tagbar for supported filetypes
         autocmd FileType * nested :call tagbar#autoopen(0)
