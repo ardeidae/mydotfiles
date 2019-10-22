@@ -106,6 +106,8 @@ let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=0
 " nerdtree window width
 let NERDTreeWinSize=30
+" disables display of the bookmarks label and help
+let NERDTreeMinimalUI=1
 
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nm :NERDTreeMirror<CR>
@@ -163,6 +165,8 @@ if has('patch-7.3.1058')
     let g:tagbar_width = 30
     " on single click, jump to tag definition
     let g:tagbar_singleclick = 1
+    " disable short help at the top
+    let g:tagbar_compact = 1
 endif
 " }}}
 
