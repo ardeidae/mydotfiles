@@ -108,6 +108,8 @@ let NERDTreeShowLineNumbers=0
 let NERDTreeWinSize=30
 " disables display of the bookmarks label and help
 let NERDTreeMinimalUI=1
+" automatically remove a buffer when a file is being deleted or renamed
+let NERDTreeAutoDeleteBuffer = 1
 
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nm :NERDTreeMirror<CR>
