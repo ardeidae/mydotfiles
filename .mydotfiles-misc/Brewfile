@@ -1,2 +1,13 @@
 brew uninstall ctags
-brew install brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+brew install ack
+brew install ccze
+brew install htop
+brew install ncdu
+brew install shellcheck
+brew install ssh-copy-id
+brew install the_silver_searcher
+brew install tig
+brew install tree
+brew install watch
