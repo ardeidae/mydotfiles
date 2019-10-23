@@ -243,6 +243,20 @@ let g:syntastic_mode_map = { 'mode': 'active',
             \ 'passive_filetypes': ['java', 'c', 'cpp'] }
 " }}}
 
+" SirVer/ultisnips {{{
+" UltiSnips - The ultimate snippet solution for Vim.
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+" use python3
+let g:UltiSnipsUsePythonVersion = 3
+" trigger configuration
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+" }}}
+
 " tagbar {{{
 if has('patch-7.3.1058')
     Plug 'majutsushi/tagbar'
