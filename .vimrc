@@ -33,10 +33,10 @@ if empty(glob(s:vim_dir . '/autoload/plug.vim'))
 endif
 
 " Set leader to , must come before any <leader> mappings
-let mapleader=","
+let mapleader = ","
 
 " Specify a directory for plugins, avoid using standard Vim directory names
-" like 'plugin'.
+" like 'plugin'
 call plug#begin(s:plugin_dir)
 
 nnoremap <leader>bi :PlugInstall<CR>
@@ -49,7 +49,7 @@ nnoremap <leader>bc :PlugClean<CR>
 
 " modern theme for modern VIMs
 Plug 'ayu-theme/ayu-vim'
-" A Vim colorscheme based on Github's syntax highlighting as of 2018.
+" A Vim colorscheme based on Github's syntax highlighting as of 2018
 Plug 'cormacrelf/vim-colors-github'
 " Retro groove color scheme for Vim
 Plug 'morhetz/gruvbox'
@@ -71,7 +71,7 @@ let g:airline#extensions#tabline#tabs_label = 'tab'
 " enable enhanced tabline
 let g:airline#extensions#tabline#enabled = 1
 " how buffer names are displayed, will smartly uniquify buffers names with
-" similar filename, suppressing common parts of paths.
+" similar filename, suppressing common parts of paths
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " straight tabs for tabline using | separator
 let g:airline#extensions#tabline#left_sep = ' '
@@ -116,7 +116,7 @@ let g:airline#extensions#syntastic#enabled = 1
 
 " enable tagbar integration
 let g:airline#extensions#tagbar#enabled = 1
-" display the full hierarchy of the tag, not just the tag itself.
+" display the full hierarchy of the tag, not just the tag itself
 " if function, show complete signature
 let g:airline#extensions#tagbar#flags = 'f,s'
 
@@ -129,14 +129,15 @@ let g:airline#extensions#whitespace#enabled = 1
 " this algorithm works well with programming styles that use tabs for
 " indentation and spaces for alignment
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
-" configure which whitespace checks to enable.
+" configure which whitespace checks to enable
 " indent: mixed indent within a line
 " long: overlong lines
 " trailing: trailing whitespace
 " mixed-indent-file: different indentation in different lines
 " conflicts: checks for conflict markers
-let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing', 'long', 'mixed-indent-file', 'conflicts' ]
-" configure the maximum number of lines where whitespace checking is enabled.
+let g:airline#extensions#whitespace#checks = ['indent', 'trailing', 'long',
+            \ 'mixed-indent-file', 'conflicts']
+" configure the maximum number of lines where whitespace checking is enabled
 let g:airline#extensions#whitespace#max_lines = 50000
 
 " enable YCM integration
@@ -151,12 +152,12 @@ let g:airline#extensions#hunks#non_zero_only = 0
 
 " vim-gitgutter {{{
 " A Vim plugin which shows a git diff in the gutter (sign column) and
-" stages/undoes hunks and partial hunks.
+" stages/undoes hunks and partial hunks
 Plug 'airblade/vim-gitgutter'
 " }}}
 
 " vim-startify {{{
-" The fancy start screen for Vim.
+" The fancy start screen for Vim
 Plug 'mhinz/vim-startify'
 " }}}
 
@@ -166,31 +167,31 @@ Plug 'scrooloose/nerdtree'
 " store the bookmarks file
 let NERDTreeBookmarksFile=s:vim_dir . '/NERDTreeBookmarks'
 " the bookmarks list is sorted in a case-sensitive manner
-let NERDTreeBookmarksSort=2
+let NERDTreeBookmarksSort = 2
 " NERDTree recursively opens dirs that have only one child which is also a dir
-let NERDTreeCascadeOpenSingleChildDir=1
+let NERDTreeCascadeOpenSingleChildDir = 1
 " sort case sensitively
-let NERDTreeCaseSensitiveSort=1
+let NERDTreeCaseSensitiveSort = 1
 " change the NERDTree directory to the root node
-let NERDTreeChDirMode=2
+let NERDTreeChDirMode = 2
 " highlight the selected entry in the tree
-let NERDTreeHighlightCursorline=1
+let NERDTreeHighlightCursorline = 1
 " single click to fold/unfold directories and double click to open files
-let NERDTreeMouseMode=2
+let NERDTreeMouseMode = 2
 " sort in natural order
-let NERDTreeNaturalSort=1
+let NERDTreeNaturalSort = 1
 " respect wildignore
-let NERDTreeRespectWildIgnore=1
+let NERDTreeRespectWildIgnore = 1
 " show the bookmarks table on startup
-let NERDTreeShowBookmarks=1
+let NERDTreeShowBookmarks = 1
 " show hidden files
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 " do not show line numbers
-let NERDTreeShowLineNumbers=0
+let NERDTreeShowLineNumbers = 0
 " nerdtree window width
-let NERDTreeWinSize=30
+let NERDTreeWinSize = 30
 " disables display of the bookmarks label and help
-let NERDTreeMinimalUI=1
+let NERDTreeMinimalUI = 1
 " automatically remove a buffer when a file is being deleted or renamed
 let NERDTreeAutoDeleteBuffer = 1
 
@@ -204,25 +205,25 @@ nnoremap <leader>nv :NERDTreeVCS<CR>
 " Vim plugin for intensely orgasmic commenting
 Plug 'scrooloose/nerdcommenter'
 " lines outside the right boundary of the selection block will be commented
-let NERDBlockComIgnoreEmpty=0
+let NERDBlockComIgnoreEmpty = 0
 " allow commenting and inverting empty lines (useful when commenting a region)
-let NERDCommentEmptyLines=1
+let NERDCommentEmptyLines = 1
 " in visual mode (v), whole lines are commented
-let NERDCommentWholeLinesInVMode=1
+let NERDCommentWholeLinesInVMode = 1
 " comments are aligned on the left
-let NERDDefaultAlign='left'
+let NERDDefaultAlign = 'left'
 " remove alternative comment
-let NERDRemoveAltComs=1
+let NERDRemoveAltComs = 1
 " remove extra spaces when uncommenting
-let NERDRemoveExtraSpaces=1
+let NERDRemoveExtraSpaces = 1
 " add spaces after comment delimiters by default
-let NERDSpaceDelims=1
+let NERDSpaceDelims = 1
 " any trailing whitespace will be deleted when uncommenting a line
-let NERDTrimTrailingWhitespace=1
+let NERDTrimTrailingWhitespace = 1
 " }}}
 
 " ctrlp.vim {{{
-" Fuzzy file, buffer, mru, tag, etc finder.
+" Fuzzy file, buffer, mru, tag, etc finder
 " https://github.com/ctrlpvim/ctrlp.vim
 Plug 'ctrlpvim/ctrlp.vim'
 " }}}
@@ -231,30 +232,30 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Syntax checking hacks for vim
 Plug 'vim-syntastic/syntastic'
 " aggregate errors from differents checkers
-let g:syntastic_aggregate_errors=1
+let g:syntastic_aggregate_errors = 1
 " the error window will be automatically opened when errors are detected, and
 " closed when none are detected
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list = 1
 " run syntax checks on file load
 let g:syntastic_check_on_open=1
-" passive checking for somes filetypes, to check, :SyntasticCheck.
+" passive checking for somes filetypes, to check, :SyntasticCheck
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'active_filetypes': [],
             \ 'passive_filetypes': ['java', 'c', 'cpp'] }
 " }}}
 
 " SirVer/ultisnips {{{
-" UltiSnips - The ultimate snippet solution for Vim.
+" UltiSnips - The ultimate snippet solution for Vim
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 " use python3
 let g:UltiSnipsUsePythonVersion = 3
 " trigger configuration
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<c-b>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
+" If you want :UltiSnipsEdit to split your window
+let g:UltiSnipsEditSplit = "vertical"
 " }}}
 
 " tagbar {{{
@@ -319,7 +320,7 @@ set lazyredraw
 set ttyfast
 " add/substract only dec, bin and hex values
 set nrformats=bin,hex
-" ignore changes in amount of white space at end of line.
+" ignore changes in amount of white space at end of line
 set diffopt+=iwhiteeol
 " show filler lines
 set diffopt+=filler
@@ -433,7 +434,7 @@ set undolevels=1000
 if has('persistent_undo')
     " use undofile
     set undofile
-    let &undodir=s:undo_dir
+    let &undodir = s:undo_dir
 endif
 
 " }}}
@@ -441,11 +442,11 @@ endif
 " backup {{{
 
 " swapfile directory
-let &directory=s:swap_dir
+let &directory = s:swap_dir
 " keep backup file
 set backup
 set writebackup
-let &backupdir=s:backup_dir
+let &backupdir = s:backup_dir
 
 " }}}
 
@@ -502,9 +503,10 @@ set foldtext=MyFoldText()
 function MyFoldText()
     let nucolwidth = &fdc + &number*&numberwidth
     let winwd = winwidth(0) - nucolwidth - 10
-    let foldlinecount = foldclosedend(v:foldstart) - foldclosed(v:foldstart) + 1
+    let foldlinecount = foldclosedend(v:foldstart)
+                \ - foldclosed(v:foldstart) + 1
     let fdnfo = string(v:foldlevel) . ", " . string(foldlinecount) . " "
-    let line =  strpart(getline(v:foldstart), 0 , winwd - len(fdnfo))
+    let line = strpart(getline(v:foldstart), 0 , winwd - len(fdnfo))
     let fillcharcount = winwd - len(line) - len(fdnfo)
     return line . repeat(" ",fillcharcount) . fdnfo
 endfunction
@@ -513,23 +515,24 @@ endfunction
 
 " functions {{{
 
-" Use <C-L> to clear the highlighting of :set hlsearch.
+" Use <C-L> to clear the highlighting of :set hlsearch
 if maparg('<C-L>', 'n') ==# ''
-    nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+    nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'
+                \ <Bar>diffupdate':''<CR><CR><C-L>
 endif
 
 " disable search display
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 function! Preserve(command)
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l=line(".")
-    let c=col(".")
+    " Preparation: save last search, and cursor position
+    let _s = @/
+    let l = line(".")
+    let c = col(".")
     " do the business:
     execute a:command
     " clean up: restore previous search history, and cursor position
-    let @/=_s
+    let @/ = _s
     call cursor(l, c)
 endfunction
 
@@ -569,7 +572,7 @@ endfunc
 
 " switch virtual edit
 function! g:ToggleVirtualEdit()
-    if &virtualedit=='all'
+    if &virtualedit == 'all'
         " disable virtual edit
         set virtualedit=
     else
@@ -611,7 +614,7 @@ endif
 " toggle paste mode
 set pastetoggle=<F5>
 
-" enable / disable virtual edit.
+" enable / disable virtual edit
 nnoremap <silent> <F6> :call g:ToggleVirtualEdit()<CR>
 
 if has('patch-7.3.1058')
@@ -672,7 +675,7 @@ nnoremap <leader>m :make<CR>
 nnoremap <leader>x :w<CR>:!chmod +x %<CR>:e<CR>
 
 " add a mapping to exit with status 1, usefull when using git difftool or
-" diffmerge on several files: end the diff process.
+" diffmerge on several files: end the diff process
 map <leader>cq :cquit<CR>
 
 " }}}
@@ -702,7 +705,7 @@ if has("autocmd")
 
     " treat .rss files as XML
     autocmd BufNewFile,BufRead *.rss setfiletype xml
-    " recognize *.txt as text files.
+    " recognize *.txt as text files
     autocmd BufRead,BufNewFile *.txt setfiletype text
     " readonly on log files
     autocmd BufRead *.log* setlocal readonly nowrap
@@ -710,7 +713,8 @@ if has("autocmd")
     " autocmd VimEnter * NERDTree
 
     " close vim if the only window left open is a NERDTree
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+                \ && b:NERDTree.isTabTree()) | q | endif
 
     if has('patch-7.3.1058')
         " open tagbar for supported filetypes
