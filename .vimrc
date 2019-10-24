@@ -290,6 +290,24 @@ if has('patch-7.3.1058')
     let g:tagbar_singleclick = 1
     " disable short help at the top
     let g:tagbar_compact = 1
+
+    " additional filetypes
+    let g:tagbar_type_ansible = {
+                \ 'ctagstype': 'ansible',
+                \ 'kinds': [
+                \ 't:tasks'
+                \ ],
+                \ 'sort': 0
+                \ }
+
+    let g:tagbar_type_css = {
+                \ 'ctagstype': 'Css',
+                \ 'kinds': [
+                \ 'c:classes',
+                \ 's:selectors',
+                \ 'i:identities'
+                \ ]
+                \ }
 endif
 " }}}
 
