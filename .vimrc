@@ -258,6 +258,11 @@ if has('patch-7.3.1058')
 endif
 " }}}
 
+" colorizer {{{
+" A Vim plugin to colorize all text in the form #rrggbb or #rgb
+Plug 'lilydjwg/colorizer'
+" }}}
+
 " }}}
 
 " vim-fugitive {{{
