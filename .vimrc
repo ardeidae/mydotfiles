@@ -134,6 +134,41 @@ let g:airline_detect_spell = 1
 let g:airline_detect_spelllang = 1
 " disable powerline fonts
 let g:airline_powerline_fonts = 0
+
+function! GetCharCode() " {{{
+    " Get the output of :ascii
+    redir => ascii
+    silent! ascii
+    redir END
+
+    if match(ascii, 'NUL') != -1
+        return 'NUL'
+    endif
+
+    " Zero pad hex values
+    let nrformat = '0x%02x'
+
+    let encoding = (&fenc == '' ? &enc : &fenc)
+
+    if encoding == 'utf-8'
+        " Zero pad with 4 zeroes in unicode files
+        let nrformat = '0x%04x'
+    endif
+
+    " Get the character and the numeric value from the return value of :ascii
+    " This matches the two first pieces of the return value, e.g.
+    " "<F>  70" => char: 'F', nr: '70'
+    let [str, char, nr; rest] = matchlist(ascii, '\v\<(.{-1,})\>\s*([0-9]+)')
+
+    " Format the numeric value
+    let nr = printf(nrformat, nr)
+
+    return "'". char ."' ". nr
+endfunction " }}}
+
+" display charcode, fileencoding and fileformat
+let g:airline_section_y = '%{GetCharCode()}
+            \ %{airline#util#wrap(airline#parts#ffenc(),0)}'
 " }}}
 
 " vim-gitgutter {{{
