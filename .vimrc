@@ -306,6 +306,19 @@ Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-fugitive'
 " }}}
 
+" undotree {{{
+" The undo history visualizer for VIM
+Plug 'mbbill/undotree'
+" the undotree window will get focus after being opened
+let g:undotree_SetFocusWhenToggle = 1
+" relative timestamps
+let g:undotree_RelativeTimestamp = 1
+" short timestamps
+let g:undotree_ShortIndicators = 1
+" hide help message
+let g:undotree_HelpLine = 0
+" }}}
+
 " }}}
 
 " Initialize plugin system
@@ -655,6 +668,8 @@ endif
 " check syntax
 nnoremap <silent> <F8> :SyntasticCheck<CR>
 nnoremap <silent> <leader>st :SyntasticToggleMode<CR>
+
+nnoremap <F9> :UndotreeToggle<CR>
 
 " Underline the current line with '='
 nnoremap <silent> <leader>u= yypVr=
