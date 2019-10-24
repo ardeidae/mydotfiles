@@ -271,6 +271,8 @@ Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-fugitive'
 " }}}
 
+" }}}
+
 " Initialize plugin system
 call plug#end()
 
