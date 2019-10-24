@@ -236,8 +236,10 @@ let g:syntastic_aggregate_errors = 1
 " the error window will be automatically opened when errors are detected, and
 " closed when none are detected
 let g:syntastic_auto_loc_list = 1
-" run syntax checks on file load
-let g:syntastic_check_on_open=1
+" do not run syntax checks on file load
+let g:syntastic_check_on_open = 0
+" do not checks on wq
+let g:syntastic_check_on_wq = 0
 " passive checking for somes filetypes, to check, :SyntasticCheck
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'active_filetypes': [],
@@ -621,6 +623,10 @@ if has('patch-7.3.1058')
     " toggle tagbar
     nnoremap <silent> <F7> :TagbarToggle<CR>
 endif
+
+" check syntax
+nnoremap <silent> <F8> :SyntasticCheck<CR>
+nnoremap <silent> <leader>st :SyntasticToggleMode<CR>
 
 " Underline the current line with '='
 nnoremap <silent> <leader>u= yypVr=
