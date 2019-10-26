@@ -316,6 +316,13 @@ endif
 Plug 'lilydjwg/colorizer'
 " }}}
 
+" vim-indent-guides {{{
+" A Vim plugin for visually displaying indent levels in code
+Plug 'nathanaelkane/vim-indent-guides'
+" disable guides on startup
+let g:indent_guides_enable_on_vim_startup = 0
+" }}}
+
 " }}}
 
 " vim-fugitive {{{
@@ -688,6 +695,8 @@ nnoremap <silent> <F8> :SyntasticCheck<CR>
 nnoremap <silent> <leader>st :SyntasticToggleMode<CR>
 
 nnoremap <F9> :UndotreeToggle<CR>
+
+nnoremap <leader>ii :IndentGuidesToggle<CR>
 
 " Underline the current line with '='
 nnoremap <silent> <leader>u= yypVr=
