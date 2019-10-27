@@ -429,7 +429,15 @@ if has('patch-7.3.541')
 endif
 " change the update time, usefull for tagbar, gitgutter, etc
 set updatetime=100
-
+" :mksession do not save empty windows, avoid quickfix windows to be empty
+" when session is restored
+set sessionoptions-=blank
+" :mksession do not save all options and mappings (also global values for
+" local options)
+set sessionoptions-=options
+" :mkview do not save options and mappings local to a window or buffer (not
+" global values for local options)
+set viewoptions-=options
 " }}}
 
 " graphical {{{
