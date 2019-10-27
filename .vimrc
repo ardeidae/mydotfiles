@@ -261,10 +261,22 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 " do not checks on wq
 let g:syntastic_check_on_wq = 0
+" echo current error to the command window
+let g:syntastic_echo_current_error = 1
+" enable error highlighting
+let g:syntastic_enable_highlighting = 1
+" use the `:sign` interface to mark syntax errors
+let g:syntastic_enable_signs = 1
+" instructs syntastic to label error messages with the names of the checkers
+let g:syntastic_id_checkers = 1
 " passive checking for somes filetypes, to check, :SyntasticCheck
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'active_filetypes': [],
             \ 'passive_filetypes': ['java', 'c', 'cpp'] }
+" sort aggregated errors
+let g:syntastic_sort_aggregated_errors = 1
+" enable balloons if vim is compiled with +ballon_eval
+let g:syntastic_enable_balloons = 1
 " }}}
 
 " SirVer/ultisnips {{{
