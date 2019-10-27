@@ -471,7 +471,7 @@ else
 
 endif
 
-if exists('+cursorline')
+if exists('+syntax')
     " show current line
     set cursorline
 endif
@@ -541,8 +541,10 @@ set wildmenu
 set wildmode=longest:full,full
 " ignore some types of files
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,.svn,.git,CVS,.hg,*.obj,.DS_Store
-" always show current position
-set ruler
+if has('cmdline_info')
+    " always show current position
+    set ruler
+endif
 " the commandbar height
 set cmdheight=1
 " always put a status line in, even if there is only one window
@@ -556,10 +558,12 @@ set showcmd
 
 " searching {{{
 
-" highlight search results
-set hlsearch
-" incremental search
-set incsearch
+if has('extra_search')
+    " highlight search results
+    set hlsearch
+    " incremental search
+    set incsearch
+endif
 " show matching parenthesis
 set showmatch
 set matchpairs+=<:>
