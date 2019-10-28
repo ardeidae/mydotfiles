@@ -499,8 +499,8 @@ set showbreak=↪
 " smartly cut lines when list is disabled
 set linebreak
 " short messages, message for reading a file overwrites any previous message,
-" and no intro message
-set shortmess=aoOI
+" no intro message, and truncate messages if needed
+set shortmess=aoOItT
 " split below
 set splitbelow
 " split right
