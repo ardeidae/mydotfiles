@@ -785,6 +785,9 @@ map <leader>cq :cquit<CR>
 " allow saving as sudo
 cmap w!! w !sudo tee > /dev/null %
 
+" another escape key, faster
+noremap! jj <Esc>
+
 " }}}
 
 " autocmd {{{
