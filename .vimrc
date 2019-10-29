@@ -782,6 +782,9 @@ nnoremap <leader>x :w<CR>:!chmod +x %<CR>:e<CR>
 " diffmerge on several files: end the diff process
 map <leader>cq :cquit<CR>
 
+" allow saving as sudo
+cmap w!! w !sudo tee > /dev/null %
+
 " }}}
 
 " autocmd {{{
