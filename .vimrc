@@ -471,7 +471,7 @@ else
 
 endif
 
-if exists('+syntax')
+if has('syntax')
     " show current line
     set cursorline
 endif
