@@ -5,6 +5,7 @@ brew install ack
 brew install ccze
 brew install htop
 brew install ncdu
+brew install neofetch
 brew install shellcheck
 brew install ssh-copy-id
 brew install the_silver_searcher
