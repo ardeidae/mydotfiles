@@ -438,6 +438,8 @@ set sessionoptions-=options
 " :mkview do not save options and mappings local to a window or buffer (not
 " global values for local options)
 set viewoptions-=options
+" show all changes
+set report=0
 " }}}
 
 " graphical {{{
