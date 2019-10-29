@@ -440,6 +440,8 @@ set sessionoptions-=options
 set viewoptions-=options
 " show all changes
 set report=0
+" it's OK to have an unwritten buffer that is not visible
+set hidden
 " }}}
 
 " graphical {{{
