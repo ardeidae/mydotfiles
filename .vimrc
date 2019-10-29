@@ -539,13 +539,17 @@ let &backupdir = s:backup_dir
 
 " the status line {{{
 
-" turn on wild menu
-set wildmenu
+if has('wildmenu')
+    " turn on wild menu
+    set wildmenu
+endif
 " completion mode
 set wildmode=longest:full,full
-" ignore some types of files
-set wildignore+=*.swp,*.bak,*.pyc,*.class,*.o,.svn,.git,CVS,.hg,*.obj,.DS_Store
-set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.psd,*.pdf
+if has('wildignore')
+    " ignore some types of files
+    set wildignore+=*.swp,*.bak,*.pyc,*.class,*.o,.svn,.git,CVS,.hg,*.obj,.DS_Store
+    set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.psd,*.pdf
+endif
 if has('cmdline_info')
     " always show current position
     set ruler
