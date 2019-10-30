@@ -562,8 +562,10 @@ set cmdheight=1
 set laststatus=2
 " Show the current mode
 set showmode
-" show the command in the status line
-set showcmd
+if has('cmdline_info')
+    " show the command in the status line
+    set showcmd
+endif
 
 " }}}
 
@@ -586,28 +588,30 @@ set noignorecase
 
 " folding {{{
 
-" enable folding
-set foldenable
-" add a fold column
-set foldcolumn=1
-" detect triple-{ style fold markers
-set foldmethod=marker
-" start out with everything folded
-set foldlevelstart=100
-" which commands trigger auto-unfold
-set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
-" set a nicer foldtext function
-set foldtext=MyFoldText()
-function MyFoldText()
-    let nucolwidth = &fdc + &number*&numberwidth
-    let winwd = winwidth(0) - nucolwidth - 10
-    let foldlinecount = foldclosedend(v:foldstart)
-                \ - foldclosed(v:foldstart) + 1
-    let fdnfo = string(v:foldlevel) . ", " . string(foldlinecount) . " "
-    let line = strpart(getline(v:foldstart), 0 , winwd - len(fdnfo))
-    let fillcharcount = winwd - len(line) - len(fdnfo)
-    return line . repeat(" ",fillcharcount) . fdnfo
-endfunction
+if has('folding')
+    " enable folding
+    set foldenable
+    " add a fold column
+    set foldcolumn=1
+    " detect triple-{ style fold markers
+    set foldmethod=marker
+    " start out with everything folded
+    set foldlevelstart=100
+    " which commands trigger auto-unfold
+    set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
+    " set a nicer foldtext function
+    set foldtext=MyFoldText()
+    function MyFoldText()
+        let nucolwidth = &fdc + &number*&numberwidth
+        let winwd = winwidth(0) - nucolwidth - 10
+        let foldlinecount = foldclosedend(v:foldstart)
+                    \ - foldclosed(v:foldstart) + 1
+        let fdnfo = string(v:foldlevel) . ", " . string(foldlinecount) . " "
+        let line = strpart(getline(v:foldstart), 0 , winwd - len(fdnfo))
+        let fillcharcount = winwd - len(line) - len(fdnfo)
+        return line . repeat(" ",fillcharcount) . fdnfo
+    endfunction
+endif
 
 " }}}
 
