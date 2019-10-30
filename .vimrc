@@ -798,6 +798,9 @@ cmap w!! w !sudo tee > /dev/null %
 " another escape key, faster
 noremap! jj <Esc>
 
+" not vi compatible, but act like D and C, yank until EOF
+map Y y$
+
 " }}}
 
 " autocmd {{{
