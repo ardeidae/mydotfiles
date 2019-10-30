@@ -515,7 +515,8 @@ set shortmess=aoOItT
 set splitbelow
 " split right
 set splitright
-
+" always show tab bar
+set showtabline=2
 " }}}
 
 " history {{{
