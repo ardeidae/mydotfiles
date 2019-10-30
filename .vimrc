@@ -808,6 +808,11 @@ nnoremap ' `
 nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
 vnoremap <leader>* "hy:%s/\V<C-r>h//<left>
 
+" reformat JSON, XML
+com! FormatJSON %!python -m json.tool
+com! FormatXML %!python3 -c "import xml.dom.minidom, sys; print(
+            \xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+
 " }}}
 
 " autocmd {{{
