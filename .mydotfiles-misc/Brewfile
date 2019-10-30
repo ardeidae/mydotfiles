@@ -4,11 +4,13 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install ack
 brew install ccze
 brew install htop
+brew install libxml2
 brew install ncdu
 brew install neofetch
 brew install shellcheck
 brew install ssh-copy-id
 brew install the_silver_searcher
+brew install tidy-html5
 brew install tig
 brew install tree
 brew install watch
