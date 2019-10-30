@@ -362,6 +362,8 @@ call plug#end()
 set termencoding=utf-8
 set encoding=utf-8
 set fileencoding=utf-8
+" no BOM for utf-8 files
+set nobomb
 " enable modeline
 set modeline
 " lines to read for modeline
