@@ -493,6 +493,14 @@ endif
 set number
 " line wrapping off
 set nowrap
+if has('linebreak')
+    " wrap lines at convenient points when wrap is on
+    set linebreak
+    " show wrapped lines
+    set showbreak=↪
+    " increase minimal number of columns used for line number
+    set numberwidth=6
+endif
 " screen lines to keep above and below the cursor
 set scrolloff=5
 set sidescrolloff=5
@@ -500,10 +508,6 @@ set sidescroll=1
 " don't display invisibles chars by default
 set nolist
 set listchars=tab:▸\ ,extends:❯,nbsp:·,trail:·,eol:¬,precedes:❮
-" show wrapped lines
-set showbreak=↪
-" smartly cut lines when list is disabled
-set linebreak
 " short messages, message for reading a file overwrites any previous message,
 " no intro message, and truncate messages if needed
 set shortmess=aoOItT
