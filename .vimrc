@@ -801,6 +801,9 @@ noremap! jj <Esc>
 " not vi compatible, but act like D and C, yank until EOF
 map Y y$
 
+" better mark jumping: line and col
+nnoremap ' `
+
 " }}}
 
 " autocmd {{{
