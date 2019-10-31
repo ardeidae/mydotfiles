@@ -423,10 +423,18 @@ set tabpagemax=1000
 set autoread
 " show as much as possible of the last line
 set display+=lastline
-" wrap comments
-set formatoptions+=croq
-" delete comment character when joining commented line
+" format comments
+set formatoptions+=c
+" continue comments by default
+set formatoptions+=r
+" make comment when using o or O from comment line
+set formatoptions+=o
+" format comments with gq
+set formatoptions+=q
+" don't break lines that are already long
+set formatoptions+=l
 if has('patch-7.3.541')
+    " delete comment character when joining commented line
     set formatoptions+=j
 endif
 " change the update time, usefull for tagbar, gitgutter, etc
