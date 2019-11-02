@@ -356,6 +356,11 @@ let g:undotree_ShortIndicators = 1
 let g:undotree_HelpLine = 0
 " }}}
 
+" vim-eunuch {{{
+" eunuch.vim: Helpers for UNIX
+Plug 'tpope/vim-eunuch'
+" }}}
+
 " }}}
 
 " Initialize plugin system
@@ -805,9 +810,6 @@ nnoremap <leader>x :w<CR>:!chmod +x %<CR>:e<CR>
 " add a mapping to exit with status 1, usefull when using git difftool or
 " diffmerge on several files: end the diff process
 map <leader>cq :cquit<CR>
-
-" allow saving as sudo
-cmap w!! w !sudo tee > /dev/null %
 
 " another escape key, faster
 inoremap jj <Esc>
