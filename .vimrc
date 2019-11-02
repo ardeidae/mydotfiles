@@ -171,6 +171,11 @@ let g:airline_section_y = '%{GetCharCode()}
             \ %{airline#util#wrap(airline#parts#ffenc(),0)}'
 " }}}
 
+" editorconfig-vim {{{
+" editorconfig plugin for vim
+Plug 'editorconfig/editorconfig-vim'
+" }}}
+
 " vim-gitgutter {{{
 " A Vim plugin which shows a git diff in the gutter (sign column) and
 " stages/undoes hunks and partial hunks
