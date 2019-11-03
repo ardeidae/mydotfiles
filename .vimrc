@@ -361,6 +361,11 @@ let g:undotree_HelpLine = 0
 Plug 'tpope/vim-eunuch'
 " }}}
 
+" vim-unimpaired {{{
+" pairs of handy bracket mappings
+Plug 'tpope/vim-unimpaired'
+" }}}
+
 " }}}
 
 " Initialize plugin system
@@ -717,6 +722,14 @@ nnoremap <silent> Q <Nop>
 " disable F1 key (help)
 inoremap <F1> <Esc>
 vnoremap <F1> <Esc>
+
+" convenience mapping for unimpaired
+nmap <F1> [
+omap <F1> [
+xmap <F1> [
+nmap <F2> ]
+omap <F2> ]
+xmap <F2> ]
 
 " navigation between windows, with tab ans shift-tab in normal mode
 nnoremap <tab> <c-w>w
