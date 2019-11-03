@@ -32,16 +32,16 @@ if empty(glob(s:vim_dir . '/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Set leader to , must come before any <leader> mappings
-let mapleader = ","
+" Set leader to space must come before any <leader> mappings
+let mapleader = " "
 
 " Specify a directory for plugins, avoid using standard Vim directory names
 " like 'plugin'
 call plug#begin(s:plugin_dir)
 
-nnoremap <leader>bi :PlugInstall<CR>
-nnoremap <leader>bu :PlugUpdate<CR>
-nnoremap <leader>bc :PlugClean<CR>
+nnoremap <leader>pi :PlugInstall<CR>
+nnoremap <leader>pu :PlugUpdate<CR>
+nnoremap <leader>pc :PlugClean<CR>
 
 " plugins {{{
 
