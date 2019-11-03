@@ -870,10 +870,6 @@ endif
 
 " }}}
 
-" :%!python -m json.tool
-" command JsonParse execute '%!python -m json.tool' | w
-" map <leader>j JsonParse
-
 " reminder {{{
 " http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
 " http://vim.wikia.com/wiki/Macros
