@@ -723,35 +723,35 @@ nnoremap <tab> <c-w>w
 nnoremap <S-tab> <c-w>W
 
 " switch list
-nnoremap <F1> :set invlist<CR>:set list?<CR>
+nnoremap <leader>il :set invlist<CR>:set list?<CR>
 
 " switch between number and relative number
-nnoremap <silent> <F2> :call g:ToggleNumberMode()<CR>
+nnoremap <silent> <leader>in :call g:ToggleNumberMode()<CR>
 
 " enable / disable wrapping
-nnoremap <silent> <F3> :set invwrap<CR>:set wrap?<CR>
+nnoremap <silent> <leader>iw :set invwrap<CR>:set wrap?<CR>
 
 if has('spell')
     " enable / disable spell checking
-    nnoremap <silent> <F4> :set invspell<CR>:set spell?<CR>
+    nnoremap <silent> <leader>is :set invspell<CR>:set spell?<CR>
 endif
 
 " toggle paste mode
-set pastetoggle=<F5>
+set pastetoggle=<F3>
 
 " enable / disable virtual edit
-nnoremap <silent> <F6> :call g:ToggleVirtualEdit()<CR>
+nnoremap <silent> <leader>iv :call g:ToggleVirtualEdit()<CR>
 
 if has('patch-7.3.1058')
     " toggle tagbar
-    nnoremap <silent> <F7> :TagbarToggle<CR>
+    nnoremap <silent> <F4> :TagbarToggle<CR>
 endif
 
 " check syntax
-nnoremap <silent> <F8> :SyntasticCheck<CR>
+nnoremap <silent> <F5> :SyntasticCheck<CR>
 nnoremap <silent> <leader>st :SyntasticToggleMode<CR>
 
-nnoremap <F9> :UndotreeToggle<CR>
+nnoremap <F6> :UndotreeToggle<CR>
 
 nnoremap <leader>ii :IndentGuidesToggle<CR>
 
