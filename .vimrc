@@ -756,14 +756,14 @@ nnoremap <F9> :UndotreeToggle<CR>
 nnoremap <leader>ii :IndentGuidesToggle<CR>
 
 " Underline the current line with '='
-nnoremap <silent> <leader>u= yypVr=
-nnoremap <silent> <leader>u- yypVr-
-nnoremap <silent> <leader>u* yypVr*
-nnoremap <silent> <leader>u# yypVr#
-nnoremap <silent> <leader>U= yyPVr=
-nnoremap <silent> <leader>U- yyPVr-
-nnoremap <silent> <leader>U* yyPVr*
-nnoremap <silent> <leader>U# yyPVr#
+nnoremap <silent> <leader>u= "uyy"upVr=
+nnoremap <silent> <leader>u- "uyy"upVr-
+nnoremap <silent> <leader>u* "uyy"upVr*
+nnoremap <silent> <leader>u# "uyy"upVr#
+nnoremap <silent> <leader>U= "uyy"uPVr=
+nnoremap <silent> <leader>U- "uyy"uPVr-
+nnoremap <silent> <leader>U* "uyy"uPVr*
+nnoremap <silent> <leader>U# "uyy"uPVr#
 
 " reselect visual block after indent/outdent
 vnoremap < <gv
