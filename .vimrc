@@ -675,43 +675,6 @@ command! RemoveEmptyLinesBlocks call Preserve('%g/^\_$\n\_^$/d')
 " reindent entire file
 command! ReIndent call Preserve("normal gg=G<C-o><C-o>zz")
 
-" switch between number, relative number and no number
-function! g:ToggleNumberMode()
-    if exists('+relativenumber')
-        if &relativenumber
-            set norelativenumber
-            set number
-            set number?
-        elseif &number
-            set nonumber
-            set nonumber?
-        else
-            set relativenumber
-            set relativenumber?
-        endif
-    else
-        if &number
-            set nonumber
-            set nonumber?
-        else
-            set number
-            set number?
-        endif
-    endif
-endfunc
-
-" switch virtual edit
-function! g:ToggleVirtualEdit()
-    if &virtualedit == 'all'
-        " disable virtual edit
-        set virtualedit=
-    else
-        " edit anywhere
-        set virtualedit=all
-    endif
-    set virtualedit?
-endfunc
-
 " }}}
 
 " mappings {{{
@@ -735,25 +698,8 @@ xmap <F2> ]
 nnoremap <tab> <c-w>w
 nnoremap <S-tab> <c-w>W
 
-" switch list
-nnoremap <leader>il :set invlist<CR>:set list?<CR>
-
-" switch between number and relative number
-nnoremap <silent> <leader>in :call g:ToggleNumberMode()<CR>
-
-" enable / disable wrapping
-nnoremap <silent> <leader>iw :set invwrap<CR>:set wrap?<CR>
-
-if has('spell')
-    " enable / disable spell checking
-    nnoremap <silent> <leader>is :set invspell<CR>:set spell?<CR>
-endif
-
 " toggle paste mode
 set pastetoggle=<F3>
-
-" enable / disable virtual edit
-nnoremap <silent> <leader>iv :call g:ToggleVirtualEdit()<CR>
 
 if has('patch-7.3.1058')
     " toggle tagbar
