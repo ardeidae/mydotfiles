@@ -116,6 +116,7 @@ The mapleader key is set to the spacebar.
 
 ### Plugins
 
+* [jmcantrell/vim-virtualenv](https://github.com/jmcantrell/vim-virtualenv);
 * [tpope/vim-unimpaired](https://github.com/tpope/vim-unimpaired);
 
 ### Mapping
@@ -205,3 +206,18 @@ To go in insert mode with paste set, press:
 * `yop` to invoke `0C`.
 
 Leaving insert mode sets nopaste automatically.
+
+### Functions
+
+#### VirtualEnv
+
+Activate a python virtualenv within Vim.
+
+* `:VirtualEnvList`: List all available virtualenvs;
+* `:VirtualEnvDeactivate`: Deactivate the current virtualenv;
+* `:VirtualEnvActivate [name]`: Activate a virtualenv.
+
+#### Custom
+
+* `:FormatJSON`: format a JSON file;
+* `:FormatXML`: format an XML file.
