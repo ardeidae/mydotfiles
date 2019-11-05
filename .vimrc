@@ -176,6 +176,11 @@ let g:airline_section_y = '%{GetCharCode()}
 Plug 'editorconfig/editorconfig-vim'
 " }}}
 
+" vim-virtualenv {{{
+" Vim plugin for working with python virtualenvs
+Plug 'jmcantrell/vim-virtualenv'
+" }}}
+
 " vim-gitgutter {{{
 " A Vim plugin which shows a git diff in the gutter (sign column) and
 " stages/undoes hunks and partial hunks
