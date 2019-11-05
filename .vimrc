@@ -379,10 +379,9 @@ set encoding=utf-8
 set fileencoding=utf-8
 " no BOM for utf-8 files
 set nobomb
-" enable modeline
-set modeline
-" lines to read for modeline
-set modelines=5
+" disable modeline
+" https://twitter.com/rawsec/status/1135895908594409472
+set nomodeline
 " don't flash
 set t_vb=
 set visualbell
