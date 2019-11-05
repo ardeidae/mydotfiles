@@ -102,11 +102,27 @@ you can see the gitconfig content, it is well documented.
 
 This is a work in progress.
 
+Plugins are managed by [junegunn/vim-plug](https://github.com/junegunn/vim-plug).
+This plugin is downloaded at first launch, `curl` command is required.
+
+Some directories are created on first launch with permissions set to 700.
+
+* `~/.vim/plugged` to store plugins;
+* `~/.vim/tmp/backup` to store backup files;
+* `~/.vim/tmp/undo` to store undo files;
+* `~/.vim/tmp/swap` to store  swap files.
+
+The mapleader key is set to the spacebar.
+
 ### Plugins
 
 * [tpope/vim-unimpaired](https://github.com/tpope/vim-unimpaired);
 
 ### Mapping
+
+* `<space>pi`: install plugins;
+* `<space>pu`: update plugins;
+* `<space>pc`: clean unused plugins.
 
 Because `[` and `]` are hard to type on french keyboard, especially on Apple
 keyboard, I added mappings `<F1>` and `<F2>` to `[` and `]`.
