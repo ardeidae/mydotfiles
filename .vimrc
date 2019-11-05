@@ -779,6 +779,7 @@ map Y y$
 
 " better mark jumping: line and col
 nnoremap ' `
+nnoremap ` '
 
 " search and replace word under cursor
 nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
