@@ -698,19 +698,16 @@ xmap <F2> ]
 nnoremap <tab> <c-w>w
 nnoremap <S-tab> <c-w>W
 
-" toggle paste mode
-set pastetoggle=<F3>
-
 if has('patch-7.3.1058')
     " toggle tagbar
-    nnoremap <silent> <F4> :TagbarToggle<CR>
+    nnoremap <silent> <F3> :TagbarToggle<CR>
 endif
 
 " check syntax
-nnoremap <silent> <F5> :SyntasticCheck<CR>
+nnoremap <silent> <F4> :SyntasticCheck<CR>
 nnoremap <silent> <leader>st :SyntasticToggleMode<CR>
 
-nnoremap <F6> :UndotreeToggle<CR>
+nnoremap <F5> :UndotreeToggle<CR>
 
 nnoremap <leader>ii :IndentGuidesToggle<CR>
 

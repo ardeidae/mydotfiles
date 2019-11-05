@@ -172,4 +172,20 @@ To switch it, you have to type `yoh`.
 * `<p`: paste after linewise, decreasing indent;
 * `<P`: paste before linewise, decreasing indent;
 * `=p`: paste after linewise, reindenting;
-* `=P`: paste before linewise, reindenting.
+* `=P`: paste before linewise, reindenting;
+* `<F1>p`: paste before linewise, using target indent;
+* `<F2>p`: paste after linewise, using target indent.
+
+### Toggle paste mode
+
+A toggle has not been provided for paste because the typical use case of
+wrapping of a solitary insertion is inefficient: You toggle twice, but you only
+paste once.
+
+To go in insert mode with paste set, press:
+
+* `<F1>`op to invoke `O`;
+* `<F2>`op to invoke `o`;
+* `yop` to invoke `0C`.
+
+Leaving insert mode sets nopaste automatically.
