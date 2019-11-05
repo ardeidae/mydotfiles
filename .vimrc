@@ -786,9 +786,10 @@ nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
 vnoremap <leader>* "hy:%s/\V<C-r>h//<left>
 
 " reformat JSON, XML
-com! FormatJSON %!python -c "import json, sys, collections; print json.dumps(
-            \json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), indent=4)"
-com! FormatXML %!python3 -c "import xml.dom.minidom, sys; print(
+command! FormatJSON %!python3 -c "import json, sys, collections; print(
+            \json.dumps(json.load(sys.stdin,
+            \object_pairs_hook=collections.OrderedDict), indent=4))"
+command! FormatXML %!python3 -c "import xml.dom.minidom, sys; print(
             \xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 
 " }}}
