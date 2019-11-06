@@ -60,6 +60,173 @@ Plug 'tomasr/molokai'
 
 " tools {{{
 
+" vim-gitgutter {{{
+" A Vim plugin which shows a git diff in the gutter (sign column) and
+" stages/undoes hunks and partial hunks
+Plug 'airblade/vim-gitgutter'
+" }}}
+
+" ctrlp.vim {{{
+" Fuzzy file, buffer, mru, tag, etc finder
+Plug 'ctrlpvim/ctrlp.vim'
+" }}}
+
+" editorconfig-vim {{{
+" editorconfig plugin for vim
+Plug 'editorconfig/editorconfig-vim'
+" }}}
+
+" vim-virtualenv {{{
+" Vim plugin for working with python virtualenvs
+Plug 'jmcantrell/vim-virtualenv'
+" }}}
+
+" tagbar {{{
+if has('patch-7.3.1058')
+    Plug 'majutsushi/tagbar'
+    " width of the tagbar window
+    let g:tagbar_width = 30
+    " on single click, jump to tag definition
+    let g:tagbar_singleclick = 1
+    " disable short help at the top
+    let g:tagbar_compact = 1
+
+    " additional filetypes
+    let g:tagbar_type_ansible = {
+                \ 'ctagstype': 'ansible',
+                \ 'kinds': [
+                \ 't:tasks'
+                \ ],
+                \ 'sort': 0
+                \ }
+
+    let g:tagbar_type_css = {
+                \ 'ctagstype': 'Css',
+                \ 'kinds': [
+                \ 'c:classes',
+                \ 's:selectors',
+                \ 'i:identities'
+                \ ]
+                \ }
+endif
+" }}}
+
+" undotree {{{
+" The undo history visualizer for VIM
+Plug 'mbbill/undotree'
+" the undotree window will get focus after being opened
+let g:undotree_SetFocusWhenToggle = 1
+" relative timestamps
+let g:undotree_RelativeTimestamp = 1
+" short timestamps
+let g:undotree_ShortIndicators = 1
+" hide help message
+let g:undotree_HelpLine = 0
+" }}}
+
+" vim-startify {{{
+" The fancy start screen for Vim
+Plug 'mhinz/vim-startify'
+" }}}
+
+" vim-indent-guides {{{
+" A Vim plugin for visually displaying indent levels in code
+Plug 'nathanaelkane/vim-indent-guides'
+" disable guides on startup
+let g:indent_guides_enable_on_vim_startup = 0
+" }}}
+
+" nerdcommenter {{{
+" Vim plugin for intensely orgasmic commenting
+Plug 'scrooloose/nerdcommenter'
+" lines outside the right boundary of the selection block will be commented
+let NERDBlockComIgnoreEmpty = 0
+" allow commenting and inverting empty lines (useful when commenting a region)
+let NERDCommentEmptyLines = 1
+" in visual mode (v), whole lines are commented
+let NERDCommentWholeLinesInVMode = 1
+" comments are aligned on the left
+let NERDDefaultAlign = 'left'
+" remove alternative comment
+let NERDRemoveAltComs = 1
+" remove extra spaces when uncommenting
+let NERDRemoveExtraSpaces = 1
+" add spaces after comment delimiters by default
+let NERDSpaceDelims = 1
+" any trailing whitespace will be deleted when uncommenting a line
+let NERDTrimTrailingWhitespace = 1
+" }}}
+
+" nerdtree {{{
+" A tree explorer plugin for vim
+Plug 'scrooloose/nerdtree'
+" store the bookmarks file
+let NERDTreeBookmarksFile=s:vim_dir . '/NERDTreeBookmarks'
+" the bookmarks list is sorted in a case-sensitive manner
+let NERDTreeBookmarksSort = 2
+" NERDTree recursively opens dirs that have only one child which is also a dir
+let NERDTreeCascadeOpenSingleChildDir = 1
+" sort case sensitively
+let NERDTreeCaseSensitiveSort = 1
+" change the NERDTree directory to the root node
+let NERDTreeChDirMode = 2
+" highlight the selected entry in the tree
+let NERDTreeHighlightCursorline = 1
+" single click to fold/unfold directories and double click to open files
+let NERDTreeMouseMode = 2
+" sort in natural order
+let NERDTreeNaturalSort = 1
+" respect wildignore
+let NERDTreeRespectWildIgnore = 1
+" show the bookmarks table on startup
+let NERDTreeShowBookmarks = 1
+" show hidden files
+let NERDTreeShowHidden = 1
+" do not show line numbers
+let NERDTreeShowLineNumbers = 0
+" nerdtree window width
+let NERDTreeWinSize = 30
+" disables display of the bookmarks label and help
+let NERDTreeMinimalUI = 1
+" automatically remove a buffer when a file is being deleted or renamed
+let NERDTreeAutoDeleteBuffer = 1
+
+nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>nm :NERDTreeMirror<CR>
+nnoremap <leader>nn :NERDTreeToggle<CR>
+nnoremap <leader>nv :NERDTreeVCS<CR>
+" }}}
+
+" SirVer/ultisnips {{{
+" UltiSnips - The ultimate snippet solution for Vim
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+" use python3
+let g:UltiSnipsUsePythonVersion = 3
+" trigger configuration
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<c-b>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
+" If you want :UltiSnipsEdit to split your window
+let g:UltiSnipsEditSplit = "vertical"
+" }}}
+
+" vim-eunuch {{{
+" eunuch.vim: Helpers for UNIX
+Plug 'tpope/vim-eunuch'
+" }}}
+
+" vim-fugitive {{{
+" fugitive.vim: a Git wrapper so awesome, it should be illegal
+" https://github.com/tpope/vim-fugitive
+Plug 'tpope/vim-fugitive'
+" }}}
+
+" vim-unimpaired {{{
+" pairs of handy bracket mappings
+Plug 'tpope/vim-unimpaired'
+" }}}
+
 " vim-airline {{{
 " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline'
@@ -171,94 +338,6 @@ let g:airline_section_y = '%{GetCharCode()}
             \ %{airline#util#wrap(airline#parts#ffenc(),0)}'
 " }}}
 
-" editorconfig-vim {{{
-" editorconfig plugin for vim
-Plug 'editorconfig/editorconfig-vim'
-" }}}
-
-" vim-virtualenv {{{
-" Vim plugin for working with python virtualenvs
-Plug 'jmcantrell/vim-virtualenv'
-" }}}
-
-" vim-gitgutter {{{
-" A Vim plugin which shows a git diff in the gutter (sign column) and
-" stages/undoes hunks and partial hunks
-Plug 'airblade/vim-gitgutter'
-" }}}
-
-" vim-startify {{{
-" The fancy start screen for Vim
-Plug 'mhinz/vim-startify'
-" }}}
-
-" nerdtree {{{
-" A tree explorer plugin for vim
-Plug 'scrooloose/nerdtree'
-" store the bookmarks file
-let NERDTreeBookmarksFile=s:vim_dir . '/NERDTreeBookmarks'
-" the bookmarks list is sorted in a case-sensitive manner
-let NERDTreeBookmarksSort = 2
-" NERDTree recursively opens dirs that have only one child which is also a dir
-let NERDTreeCascadeOpenSingleChildDir = 1
-" sort case sensitively
-let NERDTreeCaseSensitiveSort = 1
-" change the NERDTree directory to the root node
-let NERDTreeChDirMode = 2
-" highlight the selected entry in the tree
-let NERDTreeHighlightCursorline = 1
-" single click to fold/unfold directories and double click to open files
-let NERDTreeMouseMode = 2
-" sort in natural order
-let NERDTreeNaturalSort = 1
-" respect wildignore
-let NERDTreeRespectWildIgnore = 1
-" show the bookmarks table on startup
-let NERDTreeShowBookmarks = 1
-" show hidden files
-let NERDTreeShowHidden = 1
-" do not show line numbers
-let NERDTreeShowLineNumbers = 0
-" nerdtree window width
-let NERDTreeWinSize = 30
-" disables display of the bookmarks label and help
-let NERDTreeMinimalUI = 1
-" automatically remove a buffer when a file is being deleted or renamed
-let NERDTreeAutoDeleteBuffer = 1
-
-nnoremap <leader>nf :NERDTreeFind<CR>
-nnoremap <leader>nm :NERDTreeMirror<CR>
-nnoremap <leader>nn :NERDTreeToggle<CR>
-nnoremap <leader>nv :NERDTreeVCS<CR>
-" }}}
-
-" nerdcommenter {{{
-" Vim plugin for intensely orgasmic commenting
-Plug 'scrooloose/nerdcommenter'
-" lines outside the right boundary of the selection block will be commented
-let NERDBlockComIgnoreEmpty = 0
-" allow commenting and inverting empty lines (useful when commenting a region)
-let NERDCommentEmptyLines = 1
-" in visual mode (v), whole lines are commented
-let NERDCommentWholeLinesInVMode = 1
-" comments are aligned on the left
-let NERDDefaultAlign = 'left'
-" remove alternative comment
-let NERDRemoveAltComs = 1
-" remove extra spaces when uncommenting
-let NERDRemoveExtraSpaces = 1
-" add spaces after comment delimiters by default
-let NERDSpaceDelims = 1
-" any trailing whitespace will be deleted when uncommenting a line
-let NERDTrimTrailingWhitespace = 1
-" }}}
-
-" ctrlp.vim {{{
-" Fuzzy file, buffer, mru, tag, etc finder
-" https://github.com/ctrlpvim/ctrlp.vim
-Plug 'ctrlpvim/ctrlp.vim'
-" }}}
-
 " syntastic {{{
 " Syntax checking hacks for vim
 Plug 'vim-syntastic/syntastic'
@@ -289,87 +368,13 @@ let g:syntastic_sort_aggregated_errors = 1
 let g:syntastic_enable_balloons = 1
 " }}}
 
-" SirVer/ultisnips {{{
-" UltiSnips - The ultimate snippet solution for Vim
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-" use python3
-let g:UltiSnipsUsePythonVersion = 3
-" trigger configuration
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<c-b>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
-" If you want :UltiSnipsEdit to split your window
-let g:UltiSnipsEditSplit = "vertical"
-" }}}
 
-" tagbar {{{
-if has('patch-7.3.1058')
-    Plug 'majutsushi/tagbar'
-    " width of the tagbar window
-    let g:tagbar_width = 30
-    " on single click, jump to tag definition
-    let g:tagbar_singleclick = 1
-    " disable short help at the top
-    let g:tagbar_compact = 1
 
-    " additional filetypes
-    let g:tagbar_type_ansible = {
-                \ 'ctagstype': 'ansible',
-                \ 'kinds': [
-                \ 't:tasks'
-                \ ],
-                \ 'sort': 0
-                \ }
 
-    let g:tagbar_type_css = {
-                \ 'ctagstype': 'Css',
-                \ 'kinds': [
-                \ 'c:classes',
-                \ 's:selectors',
-                \ 'i:identities'
-                \ ]
-                \ }
-endif
-" }}}
-
-" vim-indent-guides {{{
-" A Vim plugin for visually displaying indent levels in code
-Plug 'nathanaelkane/vim-indent-guides'
-" disable guides on startup
-let g:indent_guides_enable_on_vim_startup = 0
-" }}}
 
 " }}}
 
-" vim-fugitive {{{
-" fugitive.vim: a Git wrapper so awesome, it should be illegal
-" https://github.com/tpope/vim-fugitive
-Plug 'tpope/vim-fugitive'
-" }}}
 
-" undotree {{{
-" The undo history visualizer for VIM
-Plug 'mbbill/undotree'
-" the undotree window will get focus after being opened
-let g:undotree_SetFocusWhenToggle = 1
-" relative timestamps
-let g:undotree_RelativeTimestamp = 1
-" short timestamps
-let g:undotree_ShortIndicators = 1
-" hide help message
-let g:undotree_HelpLine = 0
-" }}}
-
-" vim-eunuch {{{
-" eunuch.vim: Helpers for UNIX
-Plug 'tpope/vim-eunuch'
-" }}}
-
-" vim-unimpaired {{{
-" pairs of handy bracket mappings
-Plug 'tpope/vim-unimpaired'
-" }}}
 
 " }}}
 
