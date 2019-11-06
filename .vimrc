@@ -227,6 +227,11 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 " }}}
 
+" vim-surround {{{
+" surround.vim: quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
+" }}}
+
 " vim-unimpaired {{{
 " pairs of handy bracket mappings
 Plug 'tpope/vim-unimpaired'
