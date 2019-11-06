@@ -471,6 +471,10 @@ set viewoptions-=options
 set report=0
 " it's OK to have an unwritten buffer that is not visible
 set hidden
+" marks remembered for the last 100 edited files, registers with more than
+" 1024 KB text are skipped, viminfo file is stored in .vim/ directory, buffer
+" list is saved for the next start
+set viminfo+=%,'100,s1024,n~/.vim/viminfo
 " }}}
 
 " graphical {{{
