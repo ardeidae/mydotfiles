@@ -81,6 +81,11 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'jmcantrell/vim-virtualenv'
 " }}}
 
+" vim-easy-align {{{
+" A Vim alignment plugin
+Plug 'junegunn/vim-easy-align'
+" }}}
+
 " tagbar {{{
 if has('patch-7.3.1058')
     Plug 'majutsushi/tagbar'
@@ -369,12 +374,7 @@ let g:syntastic_enable_balloons = 1
 " }}}
 
 
-
-
-
 " }}}
-
-
 
 " }}}
 
