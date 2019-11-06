@@ -118,10 +118,22 @@ Some directories are created on first launch with permissions set to 700.
 
 The mapleader key is set to the spacebar.
 
+### Themes
+
+* [ayu-theme/ayu-vim](https://github.com/ayu-theme/ayu-vim): modern theme for
+  modern VIMs;
+* [cormacrelf/vim-colors-github](https://github.com/cormacrelf/vim-colors-github):
+  A Vim colorscheme based on Github's syntax highlighting as of 2018;
+* [morhetz/gruvbox](https://github.com/morhetz/gruvbox): Retro groove color
+  scheme for Vim;
+* [tomasr/molokai](https://github.com/tomasr/molokai): A port of the monokai
+  scheme for TextMate.
+
 ### Plugins
 
 * [jmcantrell/vim-virtualenv](https://github.com/jmcantrell/vim-virtualenv);
 * [tpope/vim-unimpaired](https://github.com/tpope/vim-unimpaired);
+* [editorconfig/editorconfig-vim](https://github.com/editorconfig/editorconfig-vim);
 
 ### Mapping
 
