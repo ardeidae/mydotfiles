@@ -5,8 +5,8 @@ This repository hosts my dotfiles. This is a work in progress.
 ## git
 
 This gitconfig file sets some colors, pretty format, command line and graphical
-editors for diff and merge. It defines some properties to avoid some problems on
-macOS and some safe options.
+editors for diff and merge. It defines some properties to avoid some problems
+on macOS and some safe options.
 
 When you work in a team, there is a good chance your tree will become
 disgusting because there is always someone who doesn't understand how git
@@ -14,9 +14,13 @@ works...
 
 So, here are some options that can prevent 99% of merge problems.
 
-* `merge.ff = false` because when you merge, you want to see the merge branch. In case it was a temporary branch, you can force a fast-forward using `--ff` option.
-* `pull.ff = only` because when you pull, you don't want to merge to keep a clean and straight history.
-* `pull.rebase = merges` because when you pull, if a fast-forward is not possible, you want to rebase to keep a clean and straight history, too.
+* `merge.ff = false` because when you merge, you want to see the merge branch.
+  In case it was a temporary branch, you can force a fast-forward using `--ff`
+  option.
+* `pull.ff = only` because when you pull, you don't want to merge to keep a
+  clean and straight history.
+* `pull.rebase = merges` because when you pull, if a fast-forward is not
+  possible, you want to rebase to keep a clean and straight history, too.
 
 ### Your identity
 
@@ -152,8 +156,10 @@ So, you can use these mappings.
 * `n<F2>q`: go to the ntn next quickfix (:cnext);
 * `<F1>Q`: go to the first quickfix (:cfirst);
 * `<F2>Q`: go to the last quickfix (:clast);
-* `n<F1>f`: go to the nth file preceding the current one alphabetically in the current file's directory;
-* `n<F2>f`: go to the nth file succeeding the current one alphabetically in the current file's directory;
+* `n<F1>f`: go to the nth file preceding the current one alphabetically in the
+  current file's directory;
+* `n<F2>f`: go to the nth file succeeding the current one alphabetically in the
+  current file's directory;
 * `n<F1>n`: go to the nth previous SCM conflict marker or diff/patch hunk;
 * `n<F2>n`: go to the nth next SCM conflict marker or diff/patch hunk.
 
