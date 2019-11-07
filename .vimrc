@@ -32,8 +32,10 @@ if empty(glob(s:vim_dir . '/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Set leader to space must come before any <leader> mappings
+" Set leader to space
 let mapleader = " "
+" disable space on normal mode
+nnoremap <Space> <Nop>
 
 " Specify a directory for plugins, avoid using standard Vim directory names
 " like 'plugin'
@@ -754,7 +756,7 @@ nnoremap <silent> <leader>ve :edit $MYVIMRC<CR>
 nnoremap <silent> <leader>vs :source $MYVIMRC<CR>
 
 nnoremap <leader>$ :StripTrailingWhiteSpaces<CR>
-nnoremap <leader><Space> :RemoveEmptyLines<CR>
+nnoremap <leader>s<Space> :RemoveEmptyLines<CR>
 nnoremap <leader>b<Space> :RemoveEmptyLinesBlocks<CR>
 nnoremap <leader>= :ReIndent<CR>
 
