@@ -60,12 +60,6 @@ Plug 'tomasr/molokai'
 
 " tools {{{
 
-" vim-gitgutter {{{
-" A Vim plugin which shows a git diff in the gutter (sign column) and
-" stages/undoes hunks and partial hunks
-Plug 'airblade/vim-gitgutter'
-" }}}
-
 " ctrlp.vim {{{
 " Fuzzy file, buffer, mru, tag, etc finder
 Plug 'ctrlpvim/ctrlp.vim'
