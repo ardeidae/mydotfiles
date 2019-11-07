@@ -602,8 +602,8 @@ endif
 set cmdheight=1
 " always put a status line in, even if there is only one window
 set laststatus=2
-" Show the current mode
-set showmode
+" do not show the current mode, already done by airline
+set noshowmode
 if has('cmdline_info')
     " show the command in the status line
     set showcmd
