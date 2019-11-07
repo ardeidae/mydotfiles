@@ -120,20 +120,30 @@ The mapleader key is set to the spacebar.
 
 ### Themes
 
-* [ayu-theme/ayu-vim](https://github.com/ayu-theme/ayu-vim): modern theme for
-  modern VIMs;
-* [cormacrelf/vim-colors-github](https://github.com/cormacrelf/vim-colors-github):
-  A Vim colorscheme based on Github's syntax highlighting as of 2018;
-* [morhetz/gruvbox](https://github.com/morhetz/gruvbox): Retro groove color
-  scheme for Vim;
-* [tomasr/molokai](https://github.com/tomasr/molokai): A port of the monokai
-  scheme for TextMate.
+* [ayu-theme/ayu-vim](https://github.com/ayu-theme/ayu-vim);
+* [cormacrelf/vim-colors-github](https://github.com/cormacrelf/vim-colors-github);
+* [morhetz/gruvbox](https://github.com/morhetz/gruvbox);
+* [tomasr/molokai](https://github.com/tomasr/molokai);
 
 ### Plugins
 
-* [jmcantrell/vim-virtualenv](https://github.com/jmcantrell/vim-virtualenv);
-* [tpope/vim-unimpaired](https://github.com/tpope/vim-unimpaired);
+* [ctrlpvim/ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim);
 * [editorconfig/editorconfig-vim](https://github.com/editorconfig/editorconfig-vim);
+* [honza/vim-snippets](https://github.com/honza/vim-snippets);
+* [jmcantrell/vim-virtualenv](https://github.com/jmcantrell/vim-virtualenv);
+* [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align);
+* [mbbill/undotree](https://github.com/mbbill/undotree);
+* [mhinz/vim-startify](https://github.com/mhinz/vim-startify);
+* [nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides);
+* [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter);
+* [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree);
+* [SirVer/ultisnips](https://github.com/SirVer/ultisnips);
+* [tpope/vim-eunuch](https://github.com/tpope/vim-eunuch);
+* [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive);
+* [tpope/vim-surround](https://github.com/tpope/vim-surround);
+* [tpope/vim-unimpaired](https://github.com/tpope/vim-unimpaired);
+* [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline);
+* [vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic);
 
 ### Mapping
 
