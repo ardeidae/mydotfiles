@@ -141,6 +141,10 @@ let g:undotree_HelpLine = 0
 " vim-startify {{{
 " The fancy start screen for Vim
 Plug 'mhinz/vim-startify'
+" filter recently used files
+let g:startify_skiplist = [
+        \ 'COMMIT_EDITMSG',
+        \ ]
 " }}}
 
 " vim-indent-guides {{{
