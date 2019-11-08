@@ -65,6 +65,19 @@ Plug 'tomasr/molokai'
 " ctrlp.vim {{{
 " Fuzzy file, buffer, mru, tag, etc finder
 Plug 'ctrlpvim/ctrlp.vim'
+" the directory to store the cache files
+let g:ctrlp_cache_dir = s:vim_dir . '/cache/ctrlp'
+" clear the cache on exit
+let g:ctrlp_clear_cache_on_exit = 1
+" the newly created file <c-y> is opened in the current window
+let g:ctrlp_open_new_file = 'r'
+" scan for dotfiles and dotdirs
+let g:ctrlp_show_hidden = 1
+" set local workdir to the nearest ancestor of the current file that contains
+" one of these directories: .git, .svn, etc.
+" as a fallback, the directory of the current file, unless it is a
+" subdirectory of the cwd.
+let g:ctrlp_working_path_mode = 'ra'
 " }}}
 
 " editorconfig-vim {{{
