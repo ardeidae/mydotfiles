@@ -245,6 +245,47 @@ Activate a python virtualenv within Vim.
 * `:VirtualEnvDeactivate`: Deactivate the current virtualenv;
 * `:VirtualEnvActivate [name]`: Activate a virtualenv.
 
+#### CtrlP
+
+* `<c-d>`: toggle between full-path search and filename only search, prompt's
+  base becomes '>d>' instead of '>>>';
+* `<c-r>`: toggle between the string mode and full regexp mode, prompt's base
+  becomes 'r>>' instead of '>>>';
+* `<c-f>`: scroll to the 'next' search mode in the sequence;
+* `<c-b>`: scroll to the 'previous' search mode in the sequence;
+* `<tab>`: auto-complete directory names under the current working directory
+  inside the prompt;
+* `<s-tab>`: toggle the focus between the match window and the prompt;
+* `<esc>`: exit CtrlP;
+* `<c-j>`: move selection down;
+* `<c-k>`: move selection up;
+* `<c-a>`: move the cursor to the 'start' of the prompt;
+* `<c-e>`: move the cursor to the 'end' of the prompt;
+* `<c-h>,`: move the cursor one character to the 'left';
+* `<c-l>,`: move the cursor one character to the 'right';
+* `<c-w>`: delete a preceding inner word;
+* `<c-u>`: clear the input field;
+* `<c-n>`: next string in the prompt's history;
+* `<c-p>`: previous string in the prompt's history;
+* `<cr>`: open the selected file in the 'current' window if possible;
+* `<c-t>`: open the selected file in a new 'tab';
+* `<c-v>`: open the selected file in a 'vertical' split;
+* `<c-x>,`: open the selected file in a 'horizontal' split;
+* `<c-y>`: create a new file and its parent directories;
+* `<c-z>`: mark/unmark a file to be opened with <c-o> or a file to create in
+  its directory using <c-y>;
+* `<c-o>`: open files marked by <c-z>;
+* `<F5>`: refresh and purge the cache;
+* `<F7>`: in mru mode, wipe the list, or delete entries marked by <c-z>, in
+  buffer mode, delete entry under the cursor or delete multiple entries marked
+  by <c-z>;
+* `<space>pq`: search for an entry in the current quickfix errors and jump to it;
+* `<space>pl`: search for a line in all listed buffers or in the specified [buffer];
+* `<space>pc`: search for and jump to a recent change in the current buffer;
+* `<space>pa`: search for and jump to a recent change in in all listed buffers;
+
+When opening one file, add :n to go to the nth line.
+
 #### Custom
 
 * `:FormatJSON`: format a JSON file;

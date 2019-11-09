@@ -69,10 +69,29 @@ Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_cache_dir = s:vim_dir . '/cache/ctrlp'
 " clear the cache on exit
 let g:ctrlp_clear_cache_on_exit = 1
+" disable seeding the prompt with the current file's relative path
+let g:ctrlp_default_input = 0
+" includes the current file in the match entries
+let g:ctrlp_match_current_file = 1
+" exclude files from mru
+let g:ctrlp_mruf_exclude = '\v\.git/(COMMIT_EDITMSG|index)'
+" number of recently opened files CtrlP remember
+let g:ctrlp_mruf_max = 250
+" update mru list on file saving
+let g:ctrlp_mruf_save_on_update = 1
+" open multiple files in hidden buffer
+let g:ctrlp_open_multiple_files = 'i'
 " the newly created file <c-y> is opened in the current window
 let g:ctrlp_open_new_file = 'r'
 " scan for dotfiles and dotdirs
 let g:ctrlp_show_hidden = 1
+" external tool to use for listing files instead of vim globpath
+let g:ctrlp_user_command = {
+            \ 'types': {
+            \ 1: ['.git', 'cd %s && git ls-files'],
+            \ },
+            \ 'fallback': 'find %s -type f'
+            \ }
 " set local workdir to the nearest ancestor of the current file that contains
 " one of these directories: .git, .svn, etc.
 " as a fallback, the directory of the current file, unless it is a
@@ -260,6 +279,8 @@ let g:airline#extensions#branch#format = 2
 let g:airline#extensions#branch#sha1_len = 10
 " no check about untracked files or dirty state
 let g:airline#extensions#branch#vcs_checks = []
+" configure whether to show the previous and next modes (mru, buffer, etc.)
+let g:airline#extensions#ctrlp#show_adjacent_modes = 0
 " enable/disable showing a summary of changed hunks under source control
 let g:airline#extensions#hunks#enabled = 1
 " enable/disable showing only non-zero hunks
@@ -811,6 +832,11 @@ nnoremap ` '
 " search and replace word under cursor
 nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
 vnoremap <leader>* "hy:%s/\V<C-r>h//<left>
+
+nnoremap <leader>pq :CtrlPQuickfix<CR>
+nnoremap <leader>pl :CtrlPLine<CR>
+nnoremap <leader>pc :CtrlPChange<CR>
+nnoremap <leader>pa :CtrlPChangeAll<CR>
 
 " reformat JSON, XML
 command! FormatJSON %!python3 -c "import json, sys, collections; print(
