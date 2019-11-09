@@ -147,9 +147,9 @@ The mapleader key is set to the spacebar.
 
 ### Mapping
 
-* `<space>pi`: install plugins;
-* `<space>pu`: update plugins;
-* `<space>pc`: clean unused plugins.
+* `<space>bi`: install plugins;
+* `<space>bu`: update plugins;
+* `<space>bc`: clean unused plugins.
 
 Because `[` and `]` are hard to type on french keyboard, especially on Apple
 keyboard, I added mappings `<F1>` and `<F2>` to `[` and `]`.

@@ -41,9 +41,9 @@ nnoremap <Space> <Nop>
 " like 'plugin'
 call plug#begin(s:plugin_dir)
 
-nnoremap <leader>pi :PlugInstall<CR>
-nnoremap <leader>pu :PlugUpdate<CR>
-nnoremap <leader>pc :PlugClean<CR>
+nnoremap <leader>bi :PlugInstall<CR>
+nnoremap <leader>bu :PlugUpdate<CR>
+nnoremap <leader>bc :PlugClean<CR>
 
 " plugins {{{
 
@@ -772,10 +772,10 @@ cnoremap <C-e> <End>
 nnoremap <silent> <leader>ve :edit $MYVIMRC<CR>
 nnoremap <silent> <leader>vs :source $MYVIMRC<CR>
 
-nnoremap <leader>$ :StripTrailingWhiteSpaces<CR>
-nnoremap <leader>s<Space> :RemoveEmptyLines<CR>
-nnoremap <leader>b<Space> :RemoveEmptyLinesBlocks<CR>
-nnoremap <leader>= :ReIndent<CR>
+nnoremap <leader>w$ :StripTrailingWhiteSpaces<CR>
+nnoremap <leader>wl :RemoveEmptyLines<CR>
+nnoremap <leader>wb :RemoveEmptyLinesBlocks<CR>
+nnoremap <leader>== :ReIndent<CR>
 
 " vertical split
 nnoremap <leader>sv <C-w>v<C-w>l
