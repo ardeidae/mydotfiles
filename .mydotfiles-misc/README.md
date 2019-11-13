@@ -286,6 +286,25 @@ Activate a python virtualenv within Vim.
 
 When opening one file, add :n to go to the nth line.
 
+#### vim-eunuch
+
+* `:Delete[!]`: :bdelete, and, if successful, delete the file from disk, if a
+  bang is given, it is passed along to :bdelete;
+* `:Unlink[!]`: delete the file from disk and reload the buffer, if a bang is
+  given, discard unsaved changes;
+* `:Move[!] {file}`: like :saveas, but delete the old file afterwards;
+* `:Rename[!] {file}`: like :Move, but relative to the current file's
+  containing directory;
+* `:Chmod {mode}`: change the permissions of the current file;
+* `:Mkdir {dir}`: create directory {dir} with mkdir();
+* `:Mkdir! {dir}`: create directory {dir} with mkdir() passing the "p"
+  argument, as `mkdir -p`;
+* `:SudoEdit [file]`: edit a file using sudo. This overrides any read
+  permission issues, plus allows you to write the file with :w!;
+* `:SudoWrite`: use sudo to write the file to disk. Handy when you forgot to
+  use sudo to invoke Vim. This uses :SudoEdit internally, so after the first
+  invocation you can subsequently use :w!.
+
 #### Custom
 
 * `:FormatJSON`: format a JSON file;
