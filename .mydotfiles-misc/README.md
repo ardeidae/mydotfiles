@@ -151,6 +151,8 @@ The mapleader key is set to the spacebar.
 * `<space>bu`: update plugins;
 * `<space>bc`: clean unused plugins.
 
+#### vim-unimpaired
+
 Because `[` and `]` are hard to type on french keyboard, especially on Apple
 keyboard, I added mappings `<F1>` and `<F2>` to `[` and `]`.
 
