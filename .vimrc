@@ -248,6 +248,11 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 let g:UltiSnipsEditSplit = "vertical"
 " }}}
 
+" vim-dispatch {{{
+" Asynchronous build and test dispatcher
+Plug 'tpope/vim-dispatch'
+" }}}
+
 " vim-eunuch {{{
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'

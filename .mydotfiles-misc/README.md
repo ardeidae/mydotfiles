@@ -138,6 +138,7 @@ The mapleader key is set to the spacebar.
 * [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter);
 * [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree);
 * [SirVer/ultisnips](https://github.com/SirVer/ultisnips);
+* [tpope/vim-dispatch](https://github.com/tpope/vim-dispatch);
 * [tpope/vim-eunuch](https://github.com/tpope/vim-eunuch);
 * [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive);
 * [tpope/vim-surround](https://github.com/tpope/vim-surround);
