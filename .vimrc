@@ -500,7 +500,7 @@ if has('patch-7.3.541')
     " delete comment character when joining commented line
     set formatoptions+=j
 endif
-" change the update time, usefull for tagbar, gitgutter, etc
+" change the update time, usefull for tagbar, etc
 set updatetime=100
 " :mksession do not save empty windows, avoid quickfix windows to be empty
 " when session is restored
