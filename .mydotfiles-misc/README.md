@@ -307,6 +307,19 @@ When opening one file, add :n to go to the nth line.
   use sudo to invoke Vim. This uses :SudoEdit internally, so after the first
   invocation you can subsequently use :w!.
 
+#### vim-surround
+
+* `ds"`: remove surrounding `""`;
+* `ds)`: remove surrounding `()`;
+* `dst`: remove surrounding tag;
+* `cs"'`: change surrounding `""` to `''`;
+* `cs)"`: change surrounding `()` to `""`;
+* `cs)<tag attr="val">`: change surrounding `()` to `<tag attr="val"></tag>`;
+* `cst<b>`: change surrounding tag to `<b>`;
+* `ys<motion>)`: surround text covered by the motion with `)`;
+* `yss>`: surround entire line with `>`;
+* `viwS'`: in visual mode, surround inner word with `'`.
+
 #### Custom
 
 * `:FormatJSON`: format a JSON file;
