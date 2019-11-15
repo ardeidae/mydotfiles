@@ -117,12 +117,29 @@ Plug 'junegunn/vim-easy-align'
 " tagbar {{{
 if has('patch-7.3.1058')
     Plug 'majutsushi/tagbar'
-    " width of the tagbar window
-    let g:tagbar_width = 30
-    " on single click, jump to tag definition
-    let g:tagbar_singleclick = 1
+    " do not automatically close tagbar when jumping to a tag
+    let g:tagbar_autoclose = 0
+    " cursor will move to the tagbar window when it is opened
+    let g:tagbar_autofocus = 1
+    " the current tag is inside of a closed fold then the folds will be opened
+    " as much as needed for the tag to be visible so it can be highlighted
+    let g:tagbar_autoshowtag = 1
+    " sort is case-insensitive
+    let g:tagbar_case_insensitive = 1
     " disable short help at the top
     let g:tagbar_compact = 1
+    " make the display more compact
+    let g:tagbar_indent = 1
+    " only open help with '?'
+    let g:tagbar_map_help = '?'
+    " show relative line numbers
+    let g:tagbar_show_linenumbers = 2
+    " on single click, jump to tag definition
+    let g:tagbar_singleclick = 1
+    " sort tags
+    let g:tagbar_sort = 1
+    " width of the tagbar window
+    let g:tagbar_width = 30
 
     " additional filetypes
     let g:tagbar_type_ansible = {

@@ -132,6 +132,7 @@ The mapleader key is set to the spacebar.
 * [honza/vim-snippets](https://github.com/honza/vim-snippets);
 * [jmcantrell/vim-virtualenv](https://github.com/jmcantrell/vim-virtualenv);
 * [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align);
+* [majutsushi/tagbar](https://github.com/majutsushi/tagbar);
 * [mbbill/undotree](https://github.com/mbbill/undotree);
 * [mhinz/vim-startify](https://github.com/mhinz/vim-startify);
 * [nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides);
@@ -320,6 +321,35 @@ When opening one file, add :n to go to the nth line.
 * `ys<motion>)`: surround text covered by the motion with `)`;
 * `yss>`: surround entire line with `>`;
 * `viwS'`: in visual mode, surround inner word with `'`.
+
+#### tagbar
+
+Press `<F3>` to open or close tagbar.
+Available keybindings from the tagbar window:
+
+* `<CR>`: jump to tag definition;
+* `p`: as above, but stay in tagbar window;
+* `P`: show tag in preview window;
+* `<C-N>`: go to next top-level tag;
+* `<C-P>`: go to previous top-level tag;
+* `<Space>`: display tag prototype;
+* `v`: hide non-public tags;
+* `+, zo`: open fold;
+* `-, zc`: close fold;
+* `o, za`: toggle fold;
+* `*, zR`: open all folds;
+* `=, zM`: close all folds;
+* `zr`: increment fold level by 1;
+* `zm`: decrement fold level by 1;
+* `zj`: go to next fold;
+* `zk`: go to previous fold;
+* `s`: toggle sort;
+* `i`: toggle case insensitive sort option;
+* `c`: toggle autoclose option;
+* `t`: toggle pause;
+* `x`: zoom window in/out;
+* `q`: close window;
+* `?`: toggle help.
 
 #### Custom
 
