@@ -351,6 +351,36 @@ Available keybindings from the tagbar window:
 * `q`: close window;
 * `?`: toggle help.
 
+#### undotree
+
+Press `<F5>` to open or close undotree.
+Available keybindings from the undotree window:
+
+* `<cr>: `move to the current state;
+* `u: `undo;
+* `<c-r>: `redo;
+* `<: `move to the previous saved state;
+* `>: `move to the next saved state;
+* `J: `move to the previous undo state;
+* `K: `move to the next undo state;
+* `D: `toggle the diff panel;
+* `T: `toggle relative timestamp;
+* `C: `clear undo history (with confirmation);
+* `<tab>: `set Focus back to the editor;
+* `q: `close undotree panel;
+* `?: `toggle quick help.
+
+Undotree markers:
+
+* Every change has a sequence number and it is displayed before timestamps;
+* The current state is marked as `>number<`;
+* The next state which will be restored by `:redo` or `<c-r>` is marked as
+  `{number}`;
+* The `[number]` marks the most recent change;
+* The undo history is sorted by timestamps;
+* Saved changes are marked as `s` and the big `S` indicates the most recent
+  saved change.
+
 #### Custom
 
 * `:FormatJSON`: format a JSON file;

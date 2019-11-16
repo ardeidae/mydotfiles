@@ -164,14 +164,20 @@ endif
 " undotree {{{
 " The undo history visualizer for VIM
 Plug 'mbbill/undotree'
-" the undotree window will get focus after being opened
-let g:undotree_SetFocusWhenToggle = 1
-" relative timestamps
-let g:undotree_RelativeTimestamp = 1
-" short timestamps
-let g:undotree_ShortIndicators = 1
+" diff pane height
+let g:undotree_DiffpanelHeight = 10
 " hide help message
 let g:undotree_HelpLine = 0
+" relative timestamp
+let g:undotree_RelativeTimestamp = 1
+" the undotree window will get focus after being opened
+let g:undotree_SetFocusWhenToggle = 1
+" short timestamps
+let g:undotree_ShortIndicators = 1
+" undotree pane width
+let g:undotree_SplitWidth = 30
+" undotree on the left, diff on the bottom
+let g:undotree_WindowLayout = 2
 " }}}
 
 " vim-startify {{{
