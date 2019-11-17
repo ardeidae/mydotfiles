@@ -381,6 +381,45 @@ Undotree markers:
 * Saved changes are marked as `s` and the big `S` indicates the most recent
   saved change.
 
+#### startify
+
+You can either navigate to a certain menu entry and hit `<cr>` or just
+enter the index (the index is whatever is written between the square
+brackets on that line). You can even double-click anywhere on the line.
+
+In addition, `e` creates an empty buffer, `i` creates an empty buffer and
+jumps into insert mode, `q` quits either the buffer or, if there is no
+other listed buffer left, Vim itself.
+
+Moreover, you can open multiple buffers at once. Navigate to an entry and
+hit either `b` (open in same window), `s` (open in split), `v` (open in
+vertical split) or `t` (open in tab). You can do that for multiple entries.
+You can also mix them. The order of the selections will be remembered.
+Afterwards execute these actions via `<cr>`.
+
+The uppercase variants of b/s/v/t enable the batchmode which lets you
+select any entries without navigating there first. Every following index
+will be opened in the currently active mode. E.g. to open the buffers with
+the indices 0, 2, and 4, use `B024` instead of `bjjbjjb`. To disable
+batchmode, just use the same uppercase key again, or any of the lowercase
+variants.
+
+When the selection is finished, Startify will close automatically. You can
+reopen the screen via `:Startify`.
+
+The plugin eases the handling of loading and saving sessions by putting
+sessions in a central directory.
+
+* `:SLoad`: load a session;
+* `:SSave[!]`: save a session;
+* `:SDelete[!]`: delete a session;
+* `:SClose`: close a session.
+
+If `!` is given, you won't get prompted.
+
+It also supports session persistence, so once a session is loaded, it gets
+saved automatically when Vim exits.
+
 #### Custom
 
 * `:FormatJSON`: format a JSON file;

@@ -183,10 +183,61 @@ let g:undotree_WindowLayout = 2
 " vim-startify {{{
 " The fancy start screen for Vim
 Plug 'mhinz/vim-startify'
+" list of files or directories to bookmark
+let g:startify_bookmarks = [
+            \{'vi': '$HOME/.vimrc'},
+            \{'gi': '$HOME/.gitconfig'},
+            \{'ba': '$HOME/.bashrc'},
+            \{'zs': '$HOME/.zshrc'},
+            \]
+" change to its directory when opening a file or bookmark
+let g:startify_change_to_dir = 1
+" seek and change to the root directory of the VCS,sif there is one when
+" opening a file or bookmark
+let g:startify_change_to_vcs_root = 1
+" do not display the cow
+let g:startify_custom_header = 'startify#pad(startify#fortune#boxed())'
+" the number of files to list
+let g:startify_files_number = 10
+" use a relative path if the file is in or below the current working
+" directory, otherwise an absolute path is used
+let g:startify_relative_path = 1
+" show environment variables in path, if name is shorter than value
+let g:startify_use_env = 1
+" if vim is started in a directory that contains a `Session.vim`, that session
+" will be loaded automatically
+let g:startify_session_autoload = 1
+" commands to be executed before saving a session
+let g:startify_session_before_save = [
+        \ 'echo "Cleaning up before saving.."',
+        \ 'silent! NERDTreeTabsClose',
+        \ 'silent! UndotreeHide',
+        \ 'silent! TagbarClose',
+        \ ]
+" delete all buffers when loading or closing a session:
+let g:startify_session_delete_buffers = 1
+" the directory to save/load sessions to/from
+let g:startify_session_dir = s:vim_dir . '/session'
+" maximum number of sessions to display
+let g:startify_session_number = 20
+" automatically update sessions before leaving vim or before loading a new
+" session via :sload, also works for sessions started with: vim -S
+" mysession.vim
+let g:startify_session_persistence = 1
+" sort sessions by time not by name
+let g:startify_session_sort = 1
 " filter recently used files
 let g:startify_skiplist = [
         \ 'COMMIT_EDITMSG',
+        \ '.vimrc',
+        \ '.zshrc',
+        \ '.bashrc',
+        \ '.gitconfig',
+        \'.*/share/vim/vim.*/doc/.*.txt',
+        \s:vim_dir,
         \ ]
+" updates oldfiles on-the-fly so that :Startify is always up-to-date
+let g:startify_update_oldfiles = 1
 " }}}
 
 " vim-indent-guides {{{
