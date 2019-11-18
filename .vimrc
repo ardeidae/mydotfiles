@@ -960,6 +960,9 @@ if has("autocmd")
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
                 \ && b:NERDTree.isTabTree()) | q | endif
 
+    " unlist gitcommit filetype to avoid reopening it with viminfo+=%
+    autocmd FileType gitcommit setlocal nobuflisted
+
 endif
 
 " }}}
