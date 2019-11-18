@@ -306,6 +306,7 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nm :NERDTreeMirror<CR>
 nnoremap <leader>nn :NERDTreeToggle<CR>
 nnoremap <leader>nv :NERDTreeVCS<CR>
+nnoremap <leader>nc :NERDTreeClose<CR>
 " }}}
 
 " SirVer/ultisnips {{{

@@ -439,6 +439,18 @@ Use `<space>ii` to toggle indent guides.
   mode between them;
 * `[count]<space>cu`: uncomments the selected line(s).
 
+#### nerdtree
+
+* `<space>nf`: find and reveal the file for the active buffer in the NERDTree
+  window;
+* `<space>nm`: share an existing NERDTree, from another tab, in the current
+  tab, changes made to one tree are reflected in both as they are actually the
+  same buffer;
+* `<space>nn`: toggle NERDTree window;
+* `<space>nv`: try to find the top of the version control system repository,
+  and roots the NERDTree there;
+* `<space>nc`: close the NERDTree in the current tab.
+
 #### Custom
 
 * `:FormatJSON`: format a JSON file;
