@@ -420,6 +420,12 @@ If `!` is given, you won't get prompted.
 It also supports session persistence, so once a session is loaded, it gets
 saved automatically when Vim exits.
 
+#### vim-indent-guides
+
+Indent guides are disabled by default.
+
+Use `<space>ii` to toggle indent guides.
+
 #### Custom
 
 * `:FormatJSON`: format a JSON file;
