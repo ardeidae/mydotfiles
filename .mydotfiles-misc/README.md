@@ -426,6 +426,19 @@ Indent guides are disabled by default.
 
 Use `<space>ii` to toggle indent guides.
 
+#### nerdcommenter
+
+* `[count]<space>cc`: comment out the current line or text selected in visual
+  mode;
+* `[count]<space>ci`: toggles the comment state of the selected line(s)
+  individually;
+* `[count]<space>cy`: same as `<space>cc` except that the commented line(s) are
+  yanked first;
+* `<space>c$`: comments the current line from the cursor to the end of line;
+* `<space>cA`: adds comment delimiters to the end of line and goes into insert
+  mode between them;
+* `[count]<space>cu`: uncomments the selected line(s).
+
 #### Custom
 
 * `:FormatJSON`: format a JSON file;
