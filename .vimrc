@@ -963,6 +963,9 @@ if has("autocmd")
     " unlist gitcommit filetype to avoid reopening it with viminfo+=%
     autocmd FileType gitcommit setlocal nobuflisted
 
+    " ~/.gitconfig.local is a gitconfig file
+    autocmd BufNewFile,BufRead ~/.gitconfig.local setfiletype gitconfig
+
 endif
 
 " }}}
