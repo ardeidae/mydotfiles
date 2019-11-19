@@ -451,6 +451,90 @@ Use `<space>ii` to toggle indent guides.
   and roots the NERDTree there
 * `<space>nc`: close the NERDTree in the current tab
 
+File node mappings
+* `o`: open in prev window
+* `go`: preview
+* `t`: open in new tab
+* `T`: open in new tab silently
+* `middle-click,
+* `i`: open split
+* `gi`: preview split
+* `s`: open vsplit
+* `gs`: preview vsplit
+* `<CR>`: custom open
+
+Directory node mappings
+* `o`: open & close node
+* `O`: recursively open node
+* `t`: open in new tab
+* `T`: open in new tab silently
+* `<CR>`: custom open
+* `x`: close parent of node
+* `X`: close all child nodes of current node recursively
+* `e`: explore selected dir
+
+Bookmark table mappings
+* `o`: open bookmark
+* `go`: preview file
+* `go`: find dir in tree
+* `t`: open in new tab
+* `T`: open in new tab silently
+* `<CR>`: custom open
+* `D`: delete bookmark
+
+Tree navigation mappings
+* `P`: go to root
+* `p`: go to parent
+* `K`: go to first child
+* `J`: go to last child
+* `<C-j>`: go to next sibling
+* `<C-k>`: go to prev sibling
+
+Filesystem mappings
+* `C`: change tree root to the selected dir
+* `u`: move tree root up a dir
+* `U`: move tree root up a dir but leave old root open
+* `r`: refresh cursor dir
+* `R`: refresh current root
+* `m`: Show menu
+* `cd`:change the CWD to the selected dir
+* `CD`:change tree root to CWD
+
+Tree filtering mappings
+* `I`: hidden files (on)
+* `f`: file filters (on)
+* `F`: files (on)
+* `B`: bookmarks (on)
+
+Other mappings
+* `q`: Close the NERDTree window
+* `A`: Zoom (maximize-minimize) the NERDTree window
+* `?`: toggle help
+
+Bookmark commands
+* `:Bookmark [<name>]`: Bookmark the current node as `<name>`. If there is
+  already a <name> bookmark, it is overwritten. `<name>` must not contain
+  spaces. If `<name>` is not provided, it defaults to the file or directory
+  name. For directories, a trailing slash is present.
+* `:BookmarkToRoot <name>`: Make the directory corresponding to `<name>` the
+  new root. If a treenode corresponding to `<name>` is already cached somewhere
+  in the tree then the current tree will be used, otherwise a fresh tree will
+  be opened. Note that if `<name>` points to a file then its parent will be
+  used instead.
+* `:RevealBookmark <name>`: If the node is cached under the current root then
+  it will be revealed (i.e. directory nodes above it will be opened) and the
+  cursor will be placed on it.
+* `:OpenBookmark <name>`: The Bookmark named `<name>` is opened as if `o` was
+  applied to its entry in the Bookmark table. If the Bookmark points to a
+  directory, it is made the new root of the current NERDTree. If the Bookmark
+  points to a file, that file is opened for editing in another window.
+* `:ClearBookmarks [<names>]`: Remove all the given bookmarks. If no bookmarks
+  are given then remove all bookmarks on the current node.
+* `:ClearAllBookmarks`: Remove all bookmarks.
+* `:EditBookmarks`: Opens the bookmarks file for manual editing, for removing
+  invalid bookmarks.
+* `:ReadBookmarks`: Re-read the bookmarks in the NERDTree bookmarks file.
+
 #### Custom
 
 * `:FormatJSON`: format a JSON file
