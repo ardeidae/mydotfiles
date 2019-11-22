@@ -976,3 +976,8 @@ endif
 " :h c_CTRL-F to switch to command-line window
 " :h CTRL-^ to open previously edited file
 " }}}
+
+" load .vimrc.local if it exists
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
