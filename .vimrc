@@ -709,8 +709,8 @@ endif
 set wildmode=longest:full,full
 if has('wildignore')
     " ignore some types of files
-    set wildignore+=*.swp,*.bak,*.pyc,*.class,*.o,.svn,.git,CVS,.hg,*.obj,.DS_Store
-    set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.psd,*.pdf
+    set wildignore+=*.swp,*.bak,*.pyc,*.class,*.o,.svn,.git,CVS,.hg,*.obj
+    set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.psd,*.pdf,.DS_Store
 endif
 if has('cmdline_info')
     " always show current position
