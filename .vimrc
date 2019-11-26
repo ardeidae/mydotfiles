@@ -316,7 +316,7 @@ Plug 'honza/vim-snippets'
 " use python3
 let g:UltiSnipsUsePythonVersion = 3
 " trigger configuration
-let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsExpandTrigger = "<c-l>"
 let g:UltiSnipsJumpForwardTrigger = "<c-b>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 " If you want :UltiSnipsEdit to split your window
