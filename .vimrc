@@ -185,11 +185,11 @@ let g:undotree_WindowLayout = 2
 Plug 'mhinz/vim-startify'
 " list of files or directories to bookmark
 let g:startify_bookmarks = [
-            \{'vi': '$HOME/.vimrc'},
-            \{'gi': '$HOME/.gitconfig'},
-            \{'ba': '$HOME/.bashrc'},
-            \{'zs': '$HOME/.zshrc'},
-            \]
+            \ {'vi': '$HOME/.vimrc'},
+            \ {'gi': '$HOME/.gitconfig'},
+            \ {'ba': '$HOME/.bashrc'},
+            \ {'zs': '$HOME/.zshrc'},
+            \ ]
 " change to its directory when opening a file or bookmark
 let g:startify_change_to_dir = 1
 " seek and change to the root directory of the VCS,sif there is one when
@@ -491,7 +491,6 @@ let g:syntastic_sort_aggregated_errors = 1
 " enable balloons if vim is compiled with +ballon_eval
 let g:syntastic_enable_balloons = 1
 " }}}
-
 
 " }}}
 
