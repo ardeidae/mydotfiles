@@ -15,6 +15,7 @@ brew cask install microsoft-powerpoint
 brew cask install microsoft-teams
 brew cask install microsoft-word
 brew cask install music-manager
+brew cask install oracle-jdk
 brew cask install postman
 brew cask install qutebrowser
 brew cask install signal
