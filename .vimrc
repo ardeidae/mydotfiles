@@ -496,6 +496,14 @@ let g:syntastic_sort_aggregated_errors = 1
 let g:syntastic_enable_balloons = 1
 " }}}
 
+" {{{
+Plug 'ycm-core/YouCompleteMe'
+" select previous completion
+let g:ycm_key_list_previous_completion = ['<c-k>']
+" select next completion
+let g:ycm_key_list_select_completion = ['<c-j>']
+" }}}
+
 " }}}
 
 " }}}
