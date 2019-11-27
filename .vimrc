@@ -317,8 +317,12 @@ Plug 'honza/vim-snippets'
 let g:UltiSnipsUsePythonVersion = 3
 " trigger configuration
 let g:UltiSnipsExpandTrigger = "<c-l>"
-let g:UltiSnipsJumpForwardTrigger = "<c-b>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
+" go to the previous placeholders
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+" to to the next placeholders
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+" list available snippets
+let g:UltiSnipsListSnippets = "<c-f>"
 " If you want :UltiSnipsEdit to split your window
 let g:UltiSnipsEditSplit = "vertical"
 " }}}
