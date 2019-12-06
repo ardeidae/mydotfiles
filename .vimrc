@@ -799,14 +799,14 @@ nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 function! Preserve(command)
     " Preparation: save last search, and cursor position
-    let _s = @/
-    let l = line(".")
-    let c = col(".")
+    let search_history = @/
+    let cursor_line = line(".")
+    let cursor_column = col(".")
     " do the business:
     execute a:command
     " clean up: restore previous search history, and cursor position
-    let @/ = _s
-    call cursor(l, c)
+    let @/ = search_history
+    call cursor(cursor_line, cursor_column)
 endfunction
 
 " remove trailing whitespaces
