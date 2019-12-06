@@ -945,6 +945,14 @@ if has("autocmd")
     " strip trailing white spaces on write
     autocmd BufWritePre * :StripTrailingWhiteSpaces
 
+    augroup auto_reload_vim_config
+        autocmd!
+        " automatically reload the vimrc if modified
+        autocmd BufWritePost vimrc source $MYVIMRC
+        " set help program used with K key
+        autocmd BufRead vimrc set keywordprg=:help
+    augroup END
+
     autocmd Filetype make setlocal noexpandtab
     autocmd Filetype gitconfig setlocal noexpandtab
     autocmd FileType yaml setlocal expandtab
