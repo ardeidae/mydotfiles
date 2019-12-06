@@ -957,6 +957,14 @@ if has("autocmd")
         autocmd BufWritePre * :StripTrailingWhiteSpaces
     augroup END
 
+    augroup restore_cursor_position
+        autocmd!
+        autocmd BufReadPost *
+                    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+                    \   exe "normal! g`\"" |
+                    \ endif
+    augroup END
+
     autocmd Filetype make setlocal noexpandtab
     autocmd Filetype gitconfig setlocal noexpandtab
     autocmd FileType yaml setlocal expandtab
