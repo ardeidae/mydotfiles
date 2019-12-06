@@ -942,8 +942,6 @@ command! FormatXML %!python3 -c "import xml.dom.minidom, sys; print(
 
 " only do this part when compiled with support for autocommands
 if has("autocmd")
-    " strip trailing white spaces on write
-    autocmd BufWritePre * :StripTrailingWhiteSpaces
 
     augroup auto_reload_vim_config
         autocmd!
@@ -951,6 +949,12 @@ if has("autocmd")
         autocmd BufWritePost vimrc source $MYVIMRC
         " set help program used with K key
         autocmd BufRead vimrc set keywordprg=:help
+    augroup END
+
+    augroup strip_trailing_whitespaces
+        autocmd!
+        " strip trailing white spaces on write
+        autocmd BufWritePre * :StripTrailingWhiteSpaces
     augroup END
 
     autocmd Filetype make setlocal noexpandtab
