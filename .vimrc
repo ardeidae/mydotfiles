@@ -965,11 +965,36 @@ if has("autocmd")
                     \ endif
     augroup END
 
-    autocmd Filetype make setlocal noexpandtab
-    autocmd Filetype gitconfig setlocal noexpandtab
-    autocmd FileType yaml setlocal expandtab
-    autocmd Filetype less,css setlocal iskeyword+=-
-    autocmd Filetype php setlocal iskeyword+=$
+    augroup gitconfig
+        autocmd!
+        autocmd Filetype gitconfig setlocal noexpandtab
+        " unlist gitcommit filetype to avoid reopening it with viminfo+=%
+        autocmd FileType gitcommit setlocal nobuflisted
+        " ~/.gitconfig.local is a gitconfig file
+        autocmd BufNewFile,BufRead ~/.gitconfig.local set filetype=gitconfig
+    augroup END
+
+    augroup makefile
+        autocmd!
+        autocmd BufRead,BufNewFile,BufEnter *Makefile*,*makefile* set filetype=make
+        autocmd Filetype make setlocal noexpandtab
+    augroup END
+
+    augroup yaml
+        autocmd!
+        autocmd FileType yaml setlocal expandtab
+    augroup END
+
+    augroup css
+        autocmd!
+        autocmd Filetype less,css setlocal iskeyword+=-
+    augroup END
+
+    augroup php
+        autocmd!
+        autocmd Filetype php setlocal iskeyword+=$
+    augroup END
+
     " text formatting {{{
     " gqip to format paragraph, see :h text-objects
     " t: Auto-wrap text using textwidth
@@ -991,12 +1016,6 @@ if has("autocmd")
     " close vim if the only window left open is a NERDTree
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
                 \ && b:NERDTree.isTabTree()) | q | endif
-
-    " unlist gitcommit filetype to avoid reopening it with viminfo+=%
-    autocmd FileType gitcommit setlocal nobuflisted
-
-    " ~/.gitconfig.local is a gitconfig file
-    autocmd BufNewFile,BufRead ~/.gitconfig.local setfiletype gitconfig
 
 endif
 
