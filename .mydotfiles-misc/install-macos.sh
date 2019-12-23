@@ -58,4 +58,16 @@ sudo systemsetup -setremotelogin on
 # check for software updates daily
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# disable screenshot shadows
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# screenshots are saved into ~/Pictures/Screenshots in png format
+mkdir ~/Pictures/Screenshots
+defaults write com.apple.screencapture location -string ~/Pictures/Screenshots
+defaults write com.apple.screencapture type -string png
+
+
+
+# restart affected services
 killall Dock
+killall SystemUIServer
