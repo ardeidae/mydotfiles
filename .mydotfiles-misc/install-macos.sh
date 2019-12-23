@@ -89,6 +89,9 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0.2
 # do not animate opening applications from the dock
 defaults write com.apple.dock launchanim -bool false
 
+# minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
+
 
 # restart affected services
 killall Dock
