@@ -55,4 +55,7 @@ sudo systemsetup -setrestartfreeze on
 # enable ssh
 sudo systemsetup -setremotelogin on
 
+# check for software updates daily
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
 killall Dock
