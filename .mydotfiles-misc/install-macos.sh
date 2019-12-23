@@ -67,6 +67,19 @@ defaults write com.apple.screencapture location -string ~/Pictures/Screenshots
 defaults write com.apple.screencapture type -string png
 
 
+#################
+# dock settings #
+#################
+
+# automatically hide and show the dock
+defaults write com.apple.dock autohide -bool true
+
+# remove the auto-hiding dock delay
+defaults write com.apple.dock autohide-delay -float 0
+
+# remove the animation when hiding/showing the dock
+defaults write com.apple.dock autohide-time-modifier -float 0.25
+
 
 # restart affected services
 killall Dock
