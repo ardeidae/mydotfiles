@@ -52,4 +52,7 @@ dockutil --no-restart --add "/Applications/VLC.app"
 # restart your mac automatically after it freezes
 sudo systemsetup -setrestartfreeze on
 
+# enable ssh
+sudo systemsetup -setremotelogin on
+
 killall Dock
