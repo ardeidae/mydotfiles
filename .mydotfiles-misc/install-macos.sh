@@ -80,6 +80,12 @@ defaults write com.apple.dock autohide-delay -float 0
 # remove the animation when hiding/showing the dock
 defaults write com.apple.dock autohide-time-modifier -float 0.25
 
+# enable dock spring opening and stacks item finder
+defaults write com.apple.dock enable-spring-load-actions-on-all-items -boolean yes
+
+# decrease the spring loading delay
+defaults write NSGlobalDomain com.apple.springing.delay -float 0.2
+
 
 # restart affected services
 killall Dock
