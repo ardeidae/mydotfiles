@@ -44,4 +44,12 @@ dockutil --no-restart --add "/Applications/Signal.app"
 dockutil --no-restart --add "/Applications/Transmission.app"
 dockutil --no-restart --add "/Applications/VLC.app"
 
+
+####################
+# general settings #
+####################
+
+# restart your mac automatically after it freezes
+sudo systemsetup -setrestartfreeze on
+
 killall Dock
