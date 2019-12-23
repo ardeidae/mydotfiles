@@ -92,6 +92,9 @@ defaults write com.apple.dock launchanim -bool false
 # minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
 
+# enable highlight hover effect for the grid view of a stack (dock)
+defaults write com.apple.dock mouse-over-hilite-stack -bool true
+
 
 # restart affected services
 killall Dock
