@@ -4,6 +4,7 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install ack
 brew install ccze
 brew install cmake
+brew install dockutil
 brew install htop
 brew install libxml2
 brew install ncdu
