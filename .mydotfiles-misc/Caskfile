@@ -20,6 +20,7 @@ brew cask install postman
 brew cask install qutebrowser
 brew cask install signal
 brew cask install sourcetree
+brew cask install teamviewer
 brew cask install transmission
 brew cask install tunnelblick
 brew cask install virtualbox
