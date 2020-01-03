@@ -32,7 +32,7 @@ dockutil --no-restart --add "/Applications/Docker.app"
 dockutil --no-restart --add "/Applications/Kitematic.app"
 
 dockutil --no-restart --add "/Applications/Bitwarden.app"
-dockutil --no-restart --add "/Applications/Chromium.app"
+dockutil --no-restart --add "/Applications/Brave Browser.app"
 dockutil --no-restart --add "/Applications/Firefox.app"
 dockutil --no-restart --add "/Applications/Safari.app"
 dockutil --no-restart --add "/Applications/qutebrowser.app"
