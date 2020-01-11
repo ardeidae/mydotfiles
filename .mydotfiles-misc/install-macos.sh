@@ -80,6 +80,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # set a fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 2
 
+# avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
 #################
 # dock settings #
 #################
