@@ -86,6 +86,9 @@ defaults write com.apple.dock enable-spring-load-actions-on-all-items -boolean y
 # decrease the spring loading delay
 defaults write NSGlobalDomain com.apple.springing.delay -float 0.2
 
+# do not animate opening applications from the dock
+defaults write com.apple.dock launchanim -bool false
+
 
 # restart affected services
 killall Dock
