@@ -121,6 +121,12 @@ defaults write com.apple.finder ShowSidebar -bool true
 # show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 
+# hide icons for hard drives, servers, and removable media on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
 
 # restart affected services
 killall Dock
