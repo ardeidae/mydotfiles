@@ -107,6 +107,9 @@ defaults write com.apple.finder QuitMenuItem -bool true
 # disable warning when changing file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
+# disable cmd + i animation
+defaults write com.apple.finder DisableAllAnimations -bool true
+
 
 # restart affected services
 killall Dock
