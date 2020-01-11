@@ -97,7 +97,15 @@ defaults write com.apple.dock minimize-to-application -bool true
 # enable highlight hover effect for the grid view of a stack (dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
+###################
+# finder settings #
+###################
+
+# allow finder to quit
+defaults write com.apple.finder QuitMenuItem -bool true
+
 
 # restart affected services
 killall Dock
+killall Finder
 killall SystemUIServer
