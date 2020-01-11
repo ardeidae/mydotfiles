@@ -104,6 +104,9 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 # allow finder to quit
 defaults write com.apple.finder QuitMenuItem -bool true
 
+# disable warning when changing file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
 
 # restart affected services
 killall Dock
