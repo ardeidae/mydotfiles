@@ -68,6 +68,8 @@ mkdir ~/Pictures/Screenshots
 defaults write com.apple.screencapture location -string ~/Pictures/Screenshots
 defaults write com.apple.screencapture type -string png
 
+# add extra information to login window when clicking on the time
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 #################
 # dock settings #
