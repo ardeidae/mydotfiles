@@ -113,6 +113,9 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 # show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
+# show side bar
+defaults write com.apple.finder ShowSidebar -bool true
+
 
 # restart affected services
 killall Dock
