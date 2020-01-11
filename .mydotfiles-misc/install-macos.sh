@@ -86,6 +86,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # set highlight color to orange
 defaults write NSGlobalDomain AppleHighlightColor -string "0.752941 0.964706 0.678431 Orange"
 
+# disable auto correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
 #################
 # dock settings #
 #################
