@@ -147,6 +147,9 @@ defaults write com.apple.dock autohide -bool true
 # show indicators for open applications
 defaults write com.apple.dock show-process-indicators -bool true
 
+# do not show recent applications
+defaults write com.apple.dock show-recents -bool false
+
 # remove the auto-hiding dock delay
 defaults write com.apple.dock autohide-delay -float 0
 
