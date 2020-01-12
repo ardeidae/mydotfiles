@@ -110,6 +110,8 @@ defaults write NSGlobalDomain AppleScrollerPagingBehavior -int 1
 # disable change confirmation when closing documents
 defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -bool false
 
+# close windows when quitting an app
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 #################
 # dock settings #
