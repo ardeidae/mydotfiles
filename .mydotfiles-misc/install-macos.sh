@@ -161,6 +161,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 defaults write com.apple.finder NewWindowTarget 'PfHm'
 defaults write com.apple.finder NewWindowTargetPath "'file://$HOME'"
 
+# open in new tab instead of window
+defaults write com.apple.finder FinderSpawnTab -bool true
+
 # use list view in all finder windows by default
 # four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
