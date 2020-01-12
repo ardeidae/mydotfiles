@@ -132,6 +132,9 @@ defaults write com.apple.dock mineffect -string 'scale'
 # manually open tabs when opening documents
 defaults write NSGlobalDomain AppleWindowTabbingMode -string 'manual'
 
+# double-click a window's title bar to minimize
+defaults write NSGlobalDomain AppleActionOnDoubleClick -string 'Minimize'
+
 # automatically hide and show the dock
 defaults write com.apple.dock autohide -bool true
 
