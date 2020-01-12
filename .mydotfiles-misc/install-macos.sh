@@ -148,6 +148,10 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 # when performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
+# open home directory in new finder window or tab
+defaults write com.apple.finder NewWindowTarget 'PfHm'
+defaults write com.apple.finder NewWindowTargetPath "'file://$HOME'"
+
 # use list view in all finder windows by default
 # four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
