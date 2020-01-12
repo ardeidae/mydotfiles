@@ -89,6 +89,12 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.752941 0.964706 0.6
 # disable auto correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# disable ask siri
+defaults write com.apple.assistant.support "Assistant Enabled" -bool false
+
+# disable show siri in menu bar
+defaults write com.apple.siri StatusMenuVisible -bool false
+
 #################
 # dock settings #
 #################
