@@ -98,6 +98,9 @@ defaults write com.apple.siri StatusMenuVisible -bool false
 # automatically hide and show the menu bar
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
 
+# set sidebar icon size to small
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+
 #################
 # dock settings #
 #################
