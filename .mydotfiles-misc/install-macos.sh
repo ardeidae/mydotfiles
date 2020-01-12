@@ -126,6 +126,9 @@ defaults write com.apple.dock magnification -bool
 # dock is at the bottom of screen
 defaults write com.apple.dock orientation -string 'bottom'
 
+# minimize windows using scale effect
+defaults write com.apple.dock mineffect -string 'scale'
+
 # automatically hide and show the dock
 defaults write com.apple.dock autohide -bool true
 
