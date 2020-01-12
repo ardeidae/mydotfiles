@@ -123,6 +123,9 @@ defaults write com.apple.dock tilesize -int 40
 # disable magnification
 defaults write com.apple.dock magnification -bool
 
+# dock is at the bottom of screen
+defaults write com.apple.dock orientation -string 'bottom'
+
 # automatically hide and show the dock
 defaults write com.apple.dock autohide -bool true
 
