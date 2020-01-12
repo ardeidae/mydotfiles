@@ -138,6 +138,9 @@ defaults write NSGlobalDomain AppleActionOnDoubleClick -string 'Minimize'
 # minimized windows go into application icon
 defaults write com.apple.dock minimize-to-application -bool true
 
+# do not animate opening applications
+defaults write com.apple.dock launchanim -bool false
+
 # automatically hide and show the dock
 defaults write com.apple.dock autohide -bool true
 
