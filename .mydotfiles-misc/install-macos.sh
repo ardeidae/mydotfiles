@@ -101,6 +101,13 @@ defaults write NSGlobalDomain _HIHideMenuBar -bool true
 # set sidebar icon size to small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
+# show scrollbars when scrolling
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+
+# click in the scrollbar to jump to the clicked spot
+defaults write NSGlobalDomain AppleScrollerPagingBehavior -int 1
+
+
 #################
 # dock settings #
 #################
