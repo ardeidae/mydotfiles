@@ -124,6 +124,9 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 # allow finder to quit
 defaults write com.apple.finder QuitMenuItem -bool true
 
+# display file extensions in finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
 # disable warning when changing file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
