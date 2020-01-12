@@ -95,6 +95,9 @@ defaults write com.apple.assistant.support "Assistant Enabled" -bool false
 # disable show siri in menu bar
 defaults write com.apple.siri StatusMenuVisible -bool false
 
+# automatically hide and show the menu bar
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
 #################
 # dock settings #
 #################
