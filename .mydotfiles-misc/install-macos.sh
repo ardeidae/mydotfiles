@@ -107,6 +107,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # click in the scrollbar to jump to the clicked spot
 defaults write NSGlobalDomain AppleScrollerPagingBehavior -int 1
 
+# disable change confirmation when closing documents
+defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -bool false
+
 
 #################
 # dock settings #
