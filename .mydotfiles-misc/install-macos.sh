@@ -117,6 +117,9 @@ defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 # dock settings #
 #################
 
+# set dock icon size
+defaults write com.apple.dock tilesize -int 40
+
 # automatically hide and show the dock
 defaults write com.apple.dock autohide -bool true
 
