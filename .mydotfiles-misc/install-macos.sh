@@ -144,6 +144,9 @@ defaults write com.apple.dock launchanim -bool false
 # automatically hide and show the dock
 defaults write com.apple.dock autohide -bool true
 
+# show indicators for open applications
+defaults write com.apple.dock show-process-indicators -bool true
+
 # remove the auto-hiding dock delay
 defaults write com.apple.dock autohide-delay -float 0
 
