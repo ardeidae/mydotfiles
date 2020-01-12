@@ -129,6 +129,9 @@ defaults write com.apple.dock orientation -string 'bottom'
 # minimize windows using scale effect
 defaults write com.apple.dock mineffect -string 'scale'
 
+# manually open tabs when opening documents
+defaults write NSGlobalDomain AppleWindowTabbingMode -string 'manual'
+
 # automatically hide and show the dock
 defaults write com.apple.dock autohide -bool true
 
