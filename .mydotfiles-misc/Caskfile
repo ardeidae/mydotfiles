@@ -1,5 +1,6 @@
 brew cask install adobe-acrobat-reader
 brew cask install adobe-creative-cloud
+brew cask install balenaetcher
 brew cask install bitwarden
 brew cask install brave-browser
 brew cask install docker
