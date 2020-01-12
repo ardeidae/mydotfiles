@@ -135,6 +135,9 @@ defaults write NSGlobalDomain AppleWindowTabbingMode -string 'manual'
 # double-click a window's title bar to minimize
 defaults write NSGlobalDomain AppleActionOnDoubleClick -string 'Minimize'
 
+# minimized windows go into application icon
+defaults write com.apple.dock minimize-to-application -bool true
+
 # automatically hide and show the dock
 defaults write com.apple.dock autohide -bool true
 
