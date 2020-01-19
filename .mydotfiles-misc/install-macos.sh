@@ -212,6 +212,12 @@ defaults write com.apple.finder NewWindowTargetPath "'file://$HOME'"
 # open in new tab instead of window
 defaults write com.apple.finder FinderSpawnTab -bool true
 
+# delete items from the Trash after 30 days
+defaults write com.apple.finder FXRemoveOldTrashItems -bool true
+
+# warn before emptying the trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool true
+
 # use list view in all finder windows by default
 # four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
