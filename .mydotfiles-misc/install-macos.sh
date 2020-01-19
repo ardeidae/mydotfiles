@@ -71,6 +71,15 @@ defaults write com.apple.screencapture type -string png
 # add extra information to login window when clicking on the time
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+# disable press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# set a fast key repeat delay
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# set a fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2
+
 #################
 # dock settings #
 #################
