@@ -6,6 +6,7 @@ brew install ccze
 brew install cmake
 brew install cmus
 brew install dockutil
+brew install fdupes
 brew install htop
 brew install libxml2
 brew install ncdu
