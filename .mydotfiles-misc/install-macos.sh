@@ -48,9 +48,6 @@ dockutil --no-restart --add "/Applications/Transmission.app"
 dockutil --no-restart --add "/Applications/VLC.app"
 
 
-####################
-# general settings #
-####################
 
 # restart your mac automatically after it freezes
 sudo systemsetup -setrestartfreeze on
@@ -58,58 +55,42 @@ sudo systemsetup -setrestartfreeze on
 # silence at boot time
 sudo nvram SystemAudioVolume=" "
 
-# enable ssh
-sudo systemsetup -setremotelogin on
-
 # check for software updates daily
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
-# disable screenshot shadows
-defaults write com.apple.screencapture disable-shadow -bool true
-
-# screenshots are saved into ~/Pictures/Screenshots in png format
-mkdir ~/Pictures/Screenshots
-defaults write com.apple.screencapture location -string ~/Pictures/Screenshots
-defaults write com.apple.screencapture type -string png
+# enable ssh
+sudo systemsetup -f -setremotelogin on
 
 # add extra information to login window when clicking on the time
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-# disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-# set a fast key repeat delay
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-# set a fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 2
+######################
+# system preferences #
+######################
 
-# avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+### general settings
+
+# TODO light / dark / auto
 
 # set highlight color to orange
 defaults write NSGlobalDomain AppleHighlightColor -string "0.752941 0.964706 0.678431 Orange"
 
-# disable auto correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-# disable ask siri
-defaults write com.apple.assistant.support "Assistant Enabled" -bool false
-
-# disable show siri in menu bar
-defaults write com.apple.siri StatusMenuVisible -bool false
+# set sidebar icon size to small
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # automatically hide and show the menu bar
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
 
-# set sidebar icon size to small
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
-
 # show scrollbars when scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
-# click in the scrollbar to jump to the clicked spot
+# click in the scrollbar to jump to the clicked spot (option key to override)
 defaults write NSGlobalDomain AppleScrollerPagingBehavior -int 1
+
+# TODO default browser ?
 
 # disable change confirmation when closing documents
 defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -bool false
@@ -117,15 +98,25 @@ defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -bool false
 # close windows when quitting an app
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
-#################
-# dock settings #
-#################
+# TODO recent elements
+
+# TODO handoff
+
+# TODO lcd font
+
+
+### desktop and screensaver
+
+# TODO
+
+
+### dock
 
 # set dock icon size
 defaults write com.apple.dock tilesize -int 40
 
 # disable magnification
-defaults write com.apple.dock magnification -bool
+defaults write com.apple.dock magnification -bool false
 
 # dock is at the bottom of screen
 defaults write com.apple.dock orientation -string 'bottom'
@@ -133,16 +124,14 @@ defaults write com.apple.dock orientation -string 'bottom'
 # minimize windows using scale effect
 defaults write com.apple.dock mineffect -string 'scale'
 
-# manually open tabs when opening documents
-defaults write NSGlobalDomain AppleWindowTabbingMode -string 'manual'
+# TODO prefer tabs for opening documents, manually
 
-# double-click a window's title bar to minimize
-defaults write NSGlobalDomain AppleActionOnDoubleClick -string 'Minimize'
+# TODO double clic on title bar to put in the dock
 
-# minimized windows go into application icon
+# minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
 
-# do not animate opening applications
+# do not animate opening applications from the dock
 defaults write com.apple.dock launchanim -bool false
 
 # automatically hide and show the dock
@@ -157,23 +146,75 @@ defaults write com.apple.dock show-recents -bool false
 # remove the auto-hiding dock delay
 defaults write com.apple.dock autohide-delay -float 0
 
-# remove the animation when hiding/showing the dock
+# decrease animation time when hiding/showing the dock
 defaults write com.apple.dock autohide-time-modifier -float 0.25
 
 # enable dock spring opening and stacks item finder
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -boolean yes
 
-# decrease the spring loading delay
-defaults write NSGlobalDomain com.apple.springing.delay -float 0.2
-
-# do not animate opening applications from the dock
-defaults write com.apple.dock launchanim -bool false
-
-# minimize windows into their application’s icon
-defaults write com.apple.dock minimize-to-application -bool true
-
 # enable highlight hover effect for the grid view of a stack (dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
+
+
+### mission control
+
+# TODO
+
+
+### siri
+
+# disable ask siri
+defaults write com.apple.assistant.support "Assistant Enabled" -bool false
+
+# disable show siri in menu bar
+defaults write com.apple.siri StatusMenuVisible -bool false
+
+
+### spotlight
+
+# TODO
+
+### language
+
+# TODO
+
+
+### keyboard
+
+# disable press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# set a fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2
+
+# set a fast key repeat delay
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+
+
+
+# disable screenshot shadows
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# screenshots are saved into ~/Pictures/Screenshots in png format
+mkdir ~/Pictures/Screenshots
+defaults write com.apple.screencapture location -string ~/Pictures/Screenshots
+defaults write com.apple.screencapture type -string png
+
+# avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# disable auto correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# manually open tabs when opening documents
+defaults write NSGlobalDomain AppleWindowTabbingMode -string 'manual'
+
+# double-click a window's title bar to minimize
+defaults write NSGlobalDomain AppleActionOnDoubleClick -string 'Minimize'
+
+# decrease the spring loading delay
+defaults write NSGlobalDomain com.apple.springing.delay -float 0.2
 
 ###################
 # finder settings #
@@ -225,7 +266,6 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool true
 # use list view in all finder windows by default
 # four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
 
 # restart affected services
 killall Dock
