@@ -88,7 +88,8 @@ sudo pmset -c displaysleep 10
 
 ### general settings
 
-# TODO light / dark / auto
+# automatically switch dark / light style
+defaults write NSGlobalDomain AppleInterfaceStyleSwitchesAutomatically -int 1
 
 # set highlight color to orange
 defaults write NSGlobalDomain AppleHighlightColor -string "0.752941 0.964706 0.678431 Orange"
