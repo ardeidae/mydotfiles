@@ -74,6 +74,11 @@ sudo systemsetup -f -setremotelogin on
 # add extra information to login window when clicking on the time
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+# sleep the display after 5 minutes on battery
+sudo pmset -b displaysleep 5
+
+# sleep the display after 10 minutes on charger
+sudo pmset -c displaysleep 10
 
 
 ######################
