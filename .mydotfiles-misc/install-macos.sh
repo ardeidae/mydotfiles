@@ -65,6 +65,9 @@ sudo nvram SystemAudioVolume=" "
 # check for software updates daily
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# automatically install updates
+defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -int 1
+
 # enable ssh
 sudo systemsetup -f -setremotelogin on
 
