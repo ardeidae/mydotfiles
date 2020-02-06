@@ -56,6 +56,9 @@ dockutil --no-restart --add "/Applications/VLC.app"
 # restart your mac automatically after it freezes
 sudo systemsetup -setrestartfreeze on
 
+# set timezone
+sudo systemsetup -settimezone "Europe/Paris"
+
 # silence at boot time
 sudo nvram SystemAudioVolume=" "
 
