@@ -166,7 +166,7 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.25
 
 # enable dock spring opening and stacks item finder
-defaults write com.apple.dock enable-spring-load-actions-on-all-items -boolean yes
+defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
 # enable highlight hover effect for the grid view of a stack (dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
