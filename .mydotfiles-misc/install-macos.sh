@@ -139,8 +139,8 @@ defaults write com.apple.dock magnification -bool false
 # dock is at the bottom of screen
 defaults write com.apple.dock orientation -string 'bottom'
 
-# minimize windows using scale effect
-defaults write com.apple.dock mineffect -string 'scale'
+# minimize windows using suck effect
+defaults write com.apple.dock mineffect -string 'suck'
 
 # TODO prefer tabs for opening documents, manually
 
