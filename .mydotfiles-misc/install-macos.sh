@@ -171,6 +171,11 @@ defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 # enable highlight hover effect for the grid view of a stack (dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
+# hot corners
+# top-right with alt modifier starts screen saver
+defaults write com.apple.dock wvous-tr-corner -int 5
+defaults write com.apple.dock wvous-tr-modifier -int 524288
+
 
 ### mission control
 
