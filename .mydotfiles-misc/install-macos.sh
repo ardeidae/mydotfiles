@@ -116,10 +116,9 @@ defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # TODO recent elements
 
-# TODO handoff
-
-# TODO lcd font
-
+# disable handoff
+defaults write ~/Library/Preferences/ByHost/com.apple.coreservices.useractivityd.plist ActivityAdvertisingAllowed -bool false
+defaults write ~/Library/Preferences/ByHost/com.apple.coreservices.useractivityd.plist ActivityReceivingAllowed -bool false
 
 ### desktop and screensaver
 
