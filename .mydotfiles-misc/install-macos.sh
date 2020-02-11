@@ -131,6 +131,9 @@ defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 # set dock icon size
 defaults write com.apple.dock tilesize -int 40
 
+# disable dock resizing
+defaults write com.apple.Dock size-immutable -bool true
+
 # disable magnification
 defaults write com.apple.dock magnification -bool false
 
