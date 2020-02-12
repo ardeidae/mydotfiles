@@ -213,6 +213,23 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 # set a fast key repeat delay
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
+# disable auto correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# disable auto capitalization
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# disable two spaces to get a dot
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# disable smart quotes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# disable smart dashes
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+### security and privacy
+
 
 
 
@@ -232,9 +249,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # disable saving to icloud
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
-# disable auto correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # manually open tabs when opening documents
 defaults write NSGlobalDomain AppleWindowTabbingMode -string 'manual'
