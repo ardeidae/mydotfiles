@@ -230,6 +230,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # avoid creating .DS_Store files on USB storage
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
+# disable saving to icloud
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
 # disable auto correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
