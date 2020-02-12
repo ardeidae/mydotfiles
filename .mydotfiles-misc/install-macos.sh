@@ -227,6 +227,9 @@ defaults write com.apple.screencapture type -string png
 # avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# avoid creating .DS_Store files on USB storage
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
 # disable auto correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
