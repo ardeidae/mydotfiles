@@ -253,9 +253,6 @@ defaults write NSGlobalDomain AppleWindowTabbingMode -string 'manual'
 # double-click a window's title bar to minimize
 defaults write NSGlobalDomain AppleActionOnDoubleClick -string 'Minimize'
 
-# decrease the spring loading delay
-defaults write NSGlobalDomain com.apple.springing.delay -float 0.2
-
 ###################
 # finder settings #
 ###################
