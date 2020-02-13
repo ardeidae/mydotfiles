@@ -319,6 +319,9 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
+# enable airdrop over ethernet and on unsupported macs running lion
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+
 # restart affected services
 killall Dock
 killall Finder
