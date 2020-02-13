@@ -213,6 +213,9 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 # set a fast key repeat delay
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
+# enable navigation with tab or shift-tab
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+
 # disable auto correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
