@@ -319,6 +319,11 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 # remove the spring loading delay for directories
 defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
+# automatically open a new finder window when a volume is mounted
+defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+
 # restart affected services
 killall Dock
 killall Finder
