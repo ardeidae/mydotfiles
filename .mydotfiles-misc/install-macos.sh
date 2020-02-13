@@ -244,12 +244,6 @@ mkdir ~/Pictures/Screenshots
 defaults write com.apple.screencapture location -string ~/Pictures/Screenshots
 defaults write com.apple.screencapture type -string png
 
-# avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-# avoid creating .DS_Store files on USB storage
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-
 # disable saving to icloud
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
@@ -323,6 +317,10 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+
+# avoid creating .DS_Store files on network and USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # restart affected services
 killall Dock
