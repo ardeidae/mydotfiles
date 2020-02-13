@@ -313,6 +313,12 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool true
 # four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
+# enable spring loading for directories
+defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+
+# remove the spring loading delay for directories
+defaults write NSGlobalDomain com.apple.springing.delay -float 0
+
 # restart affected services
 killall Dock
 killall Finder
