@@ -2,12 +2,14 @@ brew uninstall ctags
 
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install ack
+brew install awscli
 brew install ccze
 brew install cmake
 brew install cmus
 brew install dockutil
 brew install fdupes
 brew install htop
+brew install jq
 brew install libxml2
 brew install ncdu
 brew install neofetch
