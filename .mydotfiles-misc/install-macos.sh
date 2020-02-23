@@ -285,6 +285,9 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 # show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
+# set this path bar relative to the home directory
+defaults write com.apple.finder PathBarRootAtHome -bool true
+
 # show side bar
 defaults write com.apple.finder ShowSidebar -bool true
 
