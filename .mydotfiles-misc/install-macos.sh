@@ -335,6 +335,18 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # enable airdrop over ethernet and on unsupported macs running lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
+#################
+# miscellaneous #
+#################
+
+# expand save menu
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# expand print menu
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
 # restart affected services
 killall Dock
 killall Finder
