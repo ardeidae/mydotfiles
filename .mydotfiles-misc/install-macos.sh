@@ -29,6 +29,9 @@ which brew &> /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubuser
 ./Brewfile
 ./Caskfile
 
+sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
+chsh -s /usr/local/bin/zsh
+
 dockutil --no-restart --remove all
 
 dockutil --no-restart --add "/System/Applications/System Preferences.app"
