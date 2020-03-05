@@ -9,6 +9,7 @@ brew install cmus
 brew install colordiff
 brew install colormake
 brew install dockutil
+brew install fasd
 brew install fdupes
 brew install htop
 brew install jq
