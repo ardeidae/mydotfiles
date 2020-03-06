@@ -11,6 +11,7 @@ brew install colormake
 brew install dockutil
 brew install fasd
 brew install fdupes
+brew install git-flow-avh
 brew install htop
 brew install jq
 brew install libxml2
