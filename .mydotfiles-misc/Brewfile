@@ -16,6 +16,7 @@ brew install fasd
 brew install fdupes
 brew install findutils
 brew install gawk
+brew install git
 brew install git-flow-avh
 brew install gnu-getopt
 brew install gnu-indent
